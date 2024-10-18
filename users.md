@@ -1,0 +1,1 @@
+The intended users of the application are UMass Amherst students in the first place.
