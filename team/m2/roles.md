@@ -6,7 +6,7 @@
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/53ba5a8ee5d79792545a724c8d128a7e94df98c1): Added spaces to make use case more clear
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/9f0fb440fda692216c3f356fdb1a5ac687702a6a): Added use cases for products listing page, Login page, and Registration page.
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/83106299accb0e03fbdf84137090bba0b4319254): Drafted products listing page, detailed functionalities of the products listing page.
-  4. Took notes during meetings and kept track of what the group planned to do.
+  4.  [Commit 4](https://github.com/mykaala/umassmarketplace/commit/baaeba98572ed1ac3818ce6be32a23b2c693e473): Took notes during meetings and kept track of what the group planned to do.
 
 ## Ali Ayaan Rizvi - Project Manager 
 - **Role**: Led team in planning and executing the web app marketplace project, ensuring effective communication, resource management, and timely delivery of results.
