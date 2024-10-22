@@ -12,6 +12,8 @@
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9df00529270a0f68643fb57772e7da5f6e5c2ff8): Researched and outlined the data we will be handling for this project in data.md
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5ba893c25624cde15948e3d0c421550d480d25b7): Added the team, m2 and reports folder
+  3. Create a detailed project plan that includes timelines, milestones, and resource allocation.
+
  
 
 ## Kevin Mathew - Time-Keeper 
@@ -39,3 +41,6 @@
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/82d54ec238e5e90ba707b2265867f730bb9b10e1): added the primary users for the application.
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/9810a181cce60e55277d8051d7e5fead8ee4feda): added user needs for the application.
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/688b0a09ad8ae5ff65dbb55885b9957b86251dfa): completed and formatted the users.md file as requested.
+
+## Ayushman Satpathy - Meeting Planner
+- **Role**: Coordinate schedules and manage appointments with our intuitive meeting planner, designed to streamline collaboration and enhance productivity.
