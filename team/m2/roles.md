@@ -44,7 +44,7 @@
 ## Aryan Vakil - Communications specialist
 - **Role**: Set up a group chat for better communication between team members, ensuring respectful communication between the group members.
 - **Top Commits**:
-  1. added people to the group chat
+  1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/fd32d617ed9ae847ba22e09cd0836e0c0ef91d0d): added people to the group chat
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/9810a181cce60e55277d8051d7e5fead8ee4feda): added user needs for the application.
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/688b0a09ad8ae5ff65dbb55885b9957b86251dfa): completed and formatted the users.md file as requested.
 
