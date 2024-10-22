@@ -21,7 +21,7 @@
 - **Role**: Responsible for tracking time during meetings, providing reminders, and ensuring tasks were completed within deadlines to keep the team on schedule.
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/eb1dbc4ffca9afb8d868643e3e7daf2d4afa66dc): Created features.md file
-  2. Kept team on track to meet project deliverables and expectations. Commit ID: https://github.com/mykaala/umassmarketplace/commit/1a455d73c6f66ebb94fedd65b85fb663e2c72c4f
+  2. [Commit 2] (https://github.com/mykaala/umassmarketplace/commit/1a455d73c6f66ebb94fedd65b85fb663e2c72c4f): Kept team on track to meet project deliverables and expectations. 
 
 
 
