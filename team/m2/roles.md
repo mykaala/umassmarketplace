@@ -26,3 +26,9 @@
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9fab028b26897a08fa99e3277da952bdcac6601f): Created aaditya-saini.md file in reports folder
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5fabc9bba35028223b86ab01c5943dee648b260e): Completed the problem.md file
+
+## Mykaala Firdaus - Quality Control
+- **Role**: Oversaw the quality assurance and PR-merging process for the project, ensuring all features met functional requirements, identifying and mitigating merging issues and solving them.
+- **Top Commits**:
+  1. Added the descriptions for ui-diagrams.md: https://github.com/mykaala/umassmarketplace/commit/e17bc11fdb9ef4d24fb3b20863cfdf21b327cb1f
+  2. Fixed the pictures formatting for ui-diagrams.md https://github.com/mykaala/umassmarketplace/commit/c78ee7d30c951eceba3cfd964279d88b523ad793
