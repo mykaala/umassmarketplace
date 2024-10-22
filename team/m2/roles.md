@@ -39,7 +39,7 @@
 - **Top Commits**:
 - 1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/e17bc11fdb9ef4d24fb3b20863cfdf21b327cb1f): Added the descriptions for ui-diagrams.md
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/c78ee7d30c951eceba3cfd964279d88b523ad793): Fixed the pictures formatting for ui-diagrams.md
-  3. I oversaw the pull requests of the team and managed merge conflicts if there were any, by resolving them manually.
+  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/ad9e6ab6d925bc4314bc671b64cf15b8bf5187ea): I oversaw the pull requests of the team and managed merge conflicts if there were any, by resolving them manually.
 
 ## Aryan Vakil - Communications specialist
 - **Role**: Set up a group chat for better communication between team members, ensuring respectful communication between the group members.
