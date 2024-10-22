@@ -12,3 +12,10 @@
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9df00529270a0f68643fb57772e7da5f6e5c2ff8): Researched and outlined the data we will be handling for this project in data.md
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5ba893c25624cde15948e3d0c421550d480d25b7): Added the team, m2 and reports folder
+ 
+
+## Kevin Mathew - Time-Keeper 
+- **Role**: Responsible for tracking time during meetings, providing reminders, and ensuring tasks were completed within deadlines to keep the team on schedule.
+- **Top Commits**:
+  1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/eb1dbc4ffca9afb8d868643e3e7daf2d4afa66dc): Created features.md file
+
