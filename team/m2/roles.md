@@ -29,6 +29,8 @@
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9fab028b26897a08fa99e3277da952bdcac6601f): Created aaditya-saini.md file in reports folder
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5fabc9bba35028223b86ab01c5943dee648b260e): Completed the problem.md file
+  3.   3. Kept in touch with team members to make sure everyone understood their task and was up to date with their deadlines
+
 
 ## Mykaala Firdaus - Quality Control
 - **Role**: Oversaw the quality assurance and PR-merging process for the project, ensuring all features met functional requirements, identifying and mitigating merging issues and solving them.
