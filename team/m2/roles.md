@@ -19,3 +19,10 @@
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/eb1dbc4ffca9afb8d868643e3e7daf2d4afa66dc): Created features.md file
 
+
+## Aaditya Saini - Task Manager
+- **Role**: Made sure everyone understood their tasks in the web app marketplace project, and I communicated with everyone to make sure all of our deadlines and goals were met.
+
+- **Top Commits**:
+  1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9fab028b26897a08fa99e3277da952bdcac6601f): Created aaditya-saini.md file in reports folder
+  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5fabc9bba35028223b86ab01c5943dee648b260e): Completed the problem.md file
