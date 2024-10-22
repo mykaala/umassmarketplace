@@ -34,7 +34,7 @@
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/c78ee7d30c951eceba3cfd964279d88b523ad793): Fixed the pictures formatting for ui-diagrams.md 
 
 ## Aryan Vakil - Communications specialist
-- **Role**: Set up a group chat for better communication between team members.
+- **Role**: Set up a group chat for better communication between team members, ensuring respectful communication between the group members.
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/82d54ec238e5e90ba707b2265867f730bb9b10e1): added the primary users for the application.
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/9810a181cce60e55277d8051d7e5fead8ee4feda): added user needs for the application.
