@@ -8,6 +8,7 @@ The registration page will be presented to first time users who do not yet have 
 ## Home Page
 
 ## Product Listing Page
+The product listing page will contain a list of products that the user can browse from. There will be a scroll wheel to allow the user to view all the products. Additionally, there will be a pagination included to allow the user to browse through different pages. A filter feature will also be included to help users narrow down their search.
 
 ## Product Detail Page
 
