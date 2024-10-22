@@ -21,7 +21,7 @@
 - **Role**: Responsible for tracking time during meetings, providing reminders, and ensuring tasks were completed within deadlines to keep the team on schedule.
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/eb1dbc4ffca9afb8d868643e3e7daf2d4afa66dc): Created features.md file
-  2. Kept track of times during project meetings.
+  2. Kept team on track to meet project deliverables and expectations.
 
 
 ## Aaditya Saini - Task Manager
