@@ -1,4 +1,4 @@
-Created 3 commits for problems.md and features.md. You can view them below.
+Created 3 commits for problems.md. You can view them below.
 
 I created the problem statement.
 https://github.com/mykaala/umassmarketplace/commit/736aead02771d3f7409753476a410b108d9a6d17
