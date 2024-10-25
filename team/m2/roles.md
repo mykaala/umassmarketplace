@@ -53,5 +53,5 @@
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/43b3efddc172349bc985968ca74f5df35ea880bf): Coordinated meeting for Milestone 2
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5581ea3acda1b916e2d779f89dbd462449346948): Created meeting agenda for meeting, ensured that everyone knows what to do.
-  3. [Commit 3](): Review action items, send out meeting notes, and track progress to ensure tasks are completed by the next meeting.
+  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/5927d60cb8e3b600df9c68df8d373f5f0ee7184b): Review action items, send out meeting notes, and track progress to ensure tasks are completed by the next meeting.
 
