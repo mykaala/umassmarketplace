@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in/Sign up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="backgroundCircle">
+    </div>
+    <div id="container">
+        <div id="toggle">
+            <input type="button" value="Sign In" class="button">
+            <input type="button" value="Sign Up" class="button">
+        </div>
+        <div id = "signInContainer">
+            <form class="form">
+                <label id="username-label">Username: </label>
+                <input type="text" required value="Please enter your Username here" id="username-input"> 
+
+                <label id="password-label">Password: </label>
+                <input type="text" required value="Please enter your password here" id="password-input">
+                <input type="button" value="Sign In" id="sign-in-button" class="button"> 
+            </form>
+        </div>
+        <div id="signUpContainer">
+            <form class="form">
+                <label id="username-label">Username: </label>
+                <input type="text" required value="Please enter your Username here" id="username-input"> 
+
+                <label id="password-label">Password: </label>
+                <input type="text" required value="Please enter your password here" id="password-input"> 
+
+                <label id="confirmer">Confirm your password: </label>
+                <input type="text" required value="Please reenter your password" id="password-input">
+
+                <label id="venmoID">Venmo: </label>
+                <input type="text" required value="Please enter your Venmo" id="venmo-input">
+
+                <label id="email">Email: </label>
+                <input type="text" required value="Please enter your email" id="email-input">
+                <input type="button" value="Sign Up" id="sign-up-button" class="button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
