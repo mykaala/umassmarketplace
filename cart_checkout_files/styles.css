@@ -145,13 +145,15 @@ i.step-2 {
 }
 
 #contents {
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Align text elements to the left */
+    padding-top: 23px;
 }
 
 #button {
     background-color: #881c1c;
-    transform: translateY(15px);
-    width: 340px;
+    width: 80%;
     height: 40px;
     border-radius: 12px;
     border: none;
@@ -159,7 +161,10 @@ i.step-2 {
     font-size: 18px;
     transition: opacity 0.25s ease;
     color: white;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto; /* Center the button horizontally */
 }
 
 #button:hover {
@@ -173,13 +178,17 @@ i.step-2 {
 
 #cart-total {
     transform: translateY(-15px);
+    margin: 10px 0; /* Add some spacing between the text elements */
     
 }
 
 #subtotal {
    transform: translateY(-18px);
+   margin: 10px 0; /* Add some spacing between the text elements */
 }
 
 #total {
     transform: translateY(-14px);
+    margin: 10px 0; /* Add some spacing between the text elements */
  }
+
