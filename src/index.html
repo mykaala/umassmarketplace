@@ -2,11 +2,39 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>UKart</title>
-		<link rel="stylesheet" href="/css/home-styles.css" />
+		<link rel="stylesheet" href="./css/home_styles.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<h1>UKart</h1>
-		<script src="/js/home.js"></script>
+		<nav class="navbar">
+			<div class="navbar-container">
+				<a href="#" class="logo">UKart</a>
+				<ul class="nav-links">
+					<li><a href="#">Cart</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#" class="btn-signup">Join</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<section class="hero">
+			<div class="hero-content">
+				<h1>Welcome to UKart</h1>
+				<p>come get yo stuff!</p>
+			</div>
+		</section>
+
+		<section class="products">
+			<h2>Popular Services</h2>
+			<div class="product-grid" id="product-grid"></div>
+		</section>
+
+		<footer class="footer">
+			<p>CS326 Fall 2024 Team 37</p>
+		</footer>
+
+		<script src="./js/home.js"></script>
 	</body>
 </html>
