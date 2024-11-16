@@ -9,18 +9,16 @@
 <body>
     <div class="container">
         <h1>Product for Sale</h1>
-
         <form id="product-form" onsubmit="return validateForm()" novalidate>
             <div class="form-section">
                 <label for="product-title">Product Title</label>
-                <input type="text" id="product-title" placeholder="Enter product title" required>
+                <input type="text" id="product-title" class="text-input" placeholder="Enter product title" required>
                 <span id="product-title-error" class="error-message"></span>
             </div>
-
             <div class="form-row">
                 <div class="form-section">
                     <label for="category">Category</label>
-                    <select id="category" required>
+                    <select id="category" class="text-input" required>
                         <option value="" disabled selected>Select a category</option>
                         <option value="electronics">Electronics</option>
                         <option value="furniture">Furniture</option>
@@ -38,23 +36,19 @@
                 </div>
                 <div class="form-section">
                     <label for="price">Price</label>
-                    <input type="text" id="price" placeholder="Price" required pattern="^\d+(\.\d{1,2})?$">
+                    <input type="text" id="price" class="text-input" placeholder="Price" required pattern="^\d+(\.\d{1,2})?$">
                     <span id="price-error" class="error-message"></span>
                 </div>
             </div>
-
             <div class="form-section">
                 <label for="description">Description</label>
-                <textarea id="description" placeholder="Describe the product in detail" required></textarea>
+                <textarea id="description" class="text-input" placeholder="Describe the product in detail" required></textarea>
             </div>
-
-
             <div class="form-section">
                 <label for="product-image">Product Image</label>
-                <input type="file" id="product-image" accept="image/*" onchange="previewImage(event)" required>
+                <input type="file" id="product-image" class="file-input" accept="image/*" onchange="previewImage(event)" required>
                 <div id="image-preview" class="image-preview"></div>
             </div>
-
             <div class="form-section">
                 <label>Condition</label>
                 <div class="checkbox-group">
@@ -66,23 +60,19 @@
                 </div>
                 <span id="condition-error" class="error-message"></span>
             </div>
-
             <div class="form-section">
                 <label for="contact-email">Email</label>
-                <input type="email" id="contact-email" placeholder="Your email address" required>
+                <input type="email" id="contact-email" class="text-input" placeholder="Your email address" required>
                 <span id="email-error" class="error-message"></span>
             </div>
-
             <div class="form-section">
                 <label for="contact-phone">Phone/Text</label>
-                <input type="tel" id="contact-phone" placeholder="Your phone number">
+                <input type="tel" id="contact-phone" class="text-input" placeholder="Your phone number">
                 <span id="phone-error" class="error-message"></span>
             </div>
-
             <button type="submit" class="submit-button">Continue</button>
         </form>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
