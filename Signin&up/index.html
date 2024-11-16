@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="#home">UKart</a></li>
+            <li class="navbar-item"><a href="#home">Main</a></li>
+            <li class="navbar-item"><a href="#about">Cart</a></li>
+        </ul>
+    </nav>
+
     <div id="backgroundCircle">
     </div>
     <div id="container">
@@ -19,29 +27,29 @@
         <div id = "signInContainer">
             <form class="form">
                 <label id="username-label">Username: </label>
-                <input type="text" required value="Please enter your Username here" id="username-input" class="textBox"> 
+                <input type="text" required placeholder="Please enter your Username here" id="username-input" class="textBox"> 
 
                 <label id="password-label">Password: </label>
-                <input type="text" required value="Please enter your password here" id="password-input" class="textBox">
+                <input type="text" required placeholder="Please enter your password here" id="password-input" class="textBox">
                 <input type="button" value="Sign In" id="sign-in-button" class="button"> 
             </form>
         </div>
         <div id="signUpContainer">
             <form class="form">
                 <label id="username-label">Username: </label>
-                <input type="text" required value="Please enter your Username here" id="username-input" class="textBox"> 
+                <input type="text" required placeholder="Please enter your Username here" id="username-input" class="textBox"> 
 
                 <label id="password-label">Password: </label>
-                <input type="text" required value="Please enter your password here" id="password-input" class="textBox"> 
+                <input type="text" required placeholder="Please enter your password here" id="password-input" class="textBox"> 
 
                 <label id="confirmer">Confirm your password: </label>
-                <input type="text" required value="Please re-enter your password" id="password-input" class="textBox">
+                <input type="text" required placeholder="Please re-enter your password" id="password-input" class="textBox">
 
                 <label id="venmoID">Venmo: </label>
-                <input type="text" required value="Please enter your Venmo" id="venmo-input" class="textBox">
+                <input type="text" required placeholder="Please enter your Venmo" id="venmo-input" class="textBox">
 
                 <label id="email">Email: </label>
-                <input type="text" required value="Please enter your email" id="email-input" class="textBox">
+                <input type="text" required placeholder="Please enter your email" id="email-input" class="textBox">
                 <input type="button" value="Sign Up" id="sign-up-button" class="button">
             </form>
         </div>

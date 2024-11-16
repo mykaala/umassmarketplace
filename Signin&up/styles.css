@@ -17,14 +17,15 @@ body {
 }
 
 #toggle {
+    min-width: 100px;
+    min-height: 20px;
     position: relative;
-    display: grid;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 4vh;
     margin-bottom: 2vh;
-    width: 6vw;
+    width: 7vw;
     height: 2vw;
     background-color: white;
     overflow: hidden;
@@ -87,6 +88,7 @@ body {
 .form .button {
     margin-top: 2vh;
     background-color: rgb(10, 234, 10);
+    height: 3vh;
 }
 
 .form .textBox {
@@ -95,6 +97,53 @@ body {
     padding: 5%;
 }
 
-.hidden {
-    display: none;
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.navbar-item {
+    margin: 0; /* Spacing between items */
+}
+
+nav {
+    position: fixed; /* Makes the navigation bar stick to the viewport */
+    top: 0; /* Positions it at the very top */
+    left: 0; /* Aligns it to the left edge */
+    width: 100%; /* Makes it span the full width of the screen */
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: #000000; /* Add a background color to ensure visibility */
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow effect */
+}
+
+
+.navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 1vw 2vw;
+    display: block; /* Make the whole link area clickable */
+    background-color: black;
+}
+
+.navbar-item a:hover {
+    background-color: #ddd;
+    color: #333;
+    border-radius: 1vw;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center; /* Center align the menu items vertically */
+    }
+    .navbar-item {
+        margin: 1vw 0;
+    }
 }
