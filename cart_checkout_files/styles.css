@@ -107,15 +107,79 @@ i.step-2 {
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .overlay {
-    position: absolute; /* Position it relative to the nearest positioned ancestor (usually the body) */
-    top: 30%; /* Positioning it down from the top, adjust to your needs */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Align it exactly in the center */
-    width: 50%; /* Adjust width */
-    height: 30%;
-    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: auto; /* Set height to auto to let content adjust dynamically */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, just for effect */
-    z-index: 10; /* Ensure it appears above the existing content */
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align child elements to the top */
 }
+
+#cart-info {
+    width: 56%;
+    min-height: 370px; 
+    max-height: 500px; 
+    background-color: #ff937b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+#in-cart {
+    width: 30%;
+    height: 220px;
+    background-color: #ff937b;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 8px;
+}
+
+#contents {
+    padding-left: 20px;
+}
+
+#button {
+    background-color: #881c1c;
+    transform: translateY(15px);
+    width: 340px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    font-family: 'Mulish', 'sans-serif';
+    font-size: 18px;
+    transition: opacity 0.25s ease;
+    color: white;
+
+}
+
+#button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+#button:active {
+    opacity: 0.56;
+}
+
+#cart-total {
+    transform: translateY(-15px);
+    
+}
+
+#subtotal {
+   transform: translateY(-18px);
+}
+
+#total {
+    transform: translateY(-14px);
+ }
