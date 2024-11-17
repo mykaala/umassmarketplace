@@ -28,14 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     // First column with the delete icon
                     const deleteCell = document.createElement("td");
                     const deleteButton = document.createElement("button");
-                    
 
                     // Use the "close" icon from Material Symbols
                     deleteButton.innerHTML = '<span class="material-symbols-outlined">close</span>';
                     deleteButton.addEventListener("click", () => deleteItemFromCart(item.id));
                     deleteCell.appendChild(deleteButton);
                     row.appendChild(deleteCell);
-
 
                     // Product name column
                     const productCell = document.createElement("td");
@@ -76,21 +74,52 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Example of adding a new item to the cart (for testing purposes)
-    async function addTestItem() {
-        const testItem = {
-            id: 1,
-            name: "Test Product",
-            price: 20,
-            amount: 2
-        };
+    // Function to add multiple test items to the cart
+    async function addTestItems() {
+        const testItems = [
+            {
+                id: 1,
+                name: "Product A",
+                price: 10.99,
+                amount: 2
+            },
+            {
+                id: 2,
+                name: "Product B",
+                price: 5.49,
+                amount: 3
+            },
+            {
+                id: 3,
+                name: "Product C",
+                price: 15.75,
+                amount: 1
+            },
+            {
+                id: 4,
+                name: "Product D",
+                price: 7.99,
+                amount: 4
+            },
+            {
+                id: 5,
+                name: "Product E",
+                price: 12.50,
+                amount: 2
+            }
+        ];
 
-        await cartDB.addItemToCart(testItem);
-        console.log("Test item added to cart!");
+        for (const item of testItems) {
+            await cartDB.addItemToCart(item);
+            console.log(`Added ${item.name} to cart!`);
+        }
+
+        // Refresh the cart table after adding items
+        populateCartTable();
     }
 
-    // Add test item to the cart (can be disabled by commenting out this line)
-    addTestItem();
+    // Add multiple test items to the cart (for testing purposes)
+    addTestItems();
 
     // Initialize the cart table
     populateCartTable();
