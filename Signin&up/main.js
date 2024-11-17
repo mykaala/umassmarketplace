@@ -129,9 +129,7 @@ signUpButton.addEventListener('click', () => {
             feedback.innerHTML = "";
             feedback.style.display = "none";
         }
-        console.log(feedback.style.display);
     })
-    console.log(Array.from(feedbacks).filter(feedback => feedback.style.display === "none").length);
     if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length === feedbacks.length) {
         alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
         passwordUpInput.value = '';
