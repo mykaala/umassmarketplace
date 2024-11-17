@@ -249,7 +249,7 @@ html, body {
 
 /* Ensure first row in the body is not affected by the general row styling */
 #table tbody tr:first-child td {
-    height: 80px;  /* Smaller height for the first body row */
+    height: 70px;  /* Smaller height for the first body row */
     line-height: 40px;  /* Vertically center content in the first body row */
 }
 
