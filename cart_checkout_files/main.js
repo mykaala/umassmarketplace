@@ -1,73 +1,67 @@
 import { CartDB } from '../src/js/CartDB.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-    const cartDB = new CartDB("myCartDB");  // Instantiate the CartDB
+    const cartDB = new CartDB("myCartDB");  
 
-    // Function to populate the cart table on page load
     async function populateCartTable() {
         try {
-            const items = await cartDB.getItemsFromCart();  // Get items from IndexedDB
+            const items = await cartDB.getItemsFromCart();  
             console.log(items);
 
             const tableBody = document.querySelector("#table-body");
-            tableBody.innerHTML = "";  // Clear any existing rows
+            tableBody.innerHTML = "";  
 
-            let subtotal = 0;  // Initialize subtotal
-            let total = 0;  // Initialize total (you can add additional calculations here)
+            let subtotal = 0;  
+            let total = 0;  
 
-            // If there are no items in the cart, display an empty message
             if (items.length === 0) {
                 const emptyRow = document.createElement("tr");
                 const emptyMessage = document.createElement("td");
-                emptyMessage.colSpan = 5;  // Make it span all columns
+                emptyMessage.colSpan = 5;  
                 emptyMessage.textContent = "Your cart is empty!";
                 emptyRow.appendChild(emptyMessage);
                 tableBody.appendChild(emptyRow);
             } else {
-                // If there are items, populate the table
                 items.forEach(item => {
                     const row = document.createElement("tr");
 
-                    // First column with the delete icon
                     const deleteCell = document.createElement("td");
                     const deleteButton = document.createElement("button");
 
-                    // Use the "close" icon from Material Symbols
                     deleteButton.innerHTML = '<span class="material-symbols-outlined">close</span>';
                     deleteButton.addEventListener("click", () => deleteItemFromCart(item.id));
                     deleteCell.appendChild(deleteButton);
                     row.appendChild(deleteCell);
 
-                    // Product name column
                     const productCell = document.createElement("td");
                     productCell.textContent = item.name;
                     row.appendChild(productCell);
 
-                    // Price column
+                
                     const priceCell = document.createElement("td");
                     priceCell.textContent = `$${item.price.toFixed(2)}`;
                     row.appendChild(priceCell);
 
-                    // Amount column
+                   
                     const amountCell = document.createElement("td");
                     amountCell.textContent = item.amount;
                     row.appendChild(amountCell);
 
-                    // Subtotal column
+                    
                     const subtotalCell = document.createElement("td");
                     const itemSubtotal = item.price * item.amount;
                     subtotalCell.textContent = `$${itemSubtotal.toFixed(2)}`;
                     row.appendChild(subtotalCell);
 
-                    tableBody.appendChild(row);  // Append the row to the table body
+                    tableBody.appendChild(row);  
 
-                    // Update the subtotal and total
+                   
                     subtotal += itemSubtotal;
-                    total += itemSubtotal;  // You can adjust the total calculation as needed (e.g., with taxes or discounts)
+                    total += itemSubtotal;  
                 });
             }
 
-            // Now update the subtotal and total values in the Cart Info section
+         
             updateCartInfo(subtotal, total);
 
         } catch (error) {
@@ -75,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Function to delete item from cart
+    
     async function deleteItemFromCart(itemID) {
         try {
             await cartDB.removeItemFromCart(itemID);
@@ -86,17 +80,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Function to update the Cart Info (Subtotal and Total)
+    
     function updateCartInfo(subtotal, total) {
         const subtotalElement = document.querySelector("#subtotal .value");
         const totalElement = document.querySelector("#total .value");
 
-        // Update subtotal and total values
+       
         subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
         totalElement.textContent = `$${total.toFixed(2)}`;
     }
 
-    // Function to add multiple test items to the cart
+    
     async function addTestItems() {
         const testItems = [
             { id: 1, name: "Product A", price: 10.99, amount: 2 },
@@ -107,23 +101,21 @@ document.addEventListener("DOMContentLoaded", function () {
             { id: 6, name: "Product F", price: 16.50, amount: 1 },
         ];
     
-        // Add test items to the cart
+     
         for (const item of testItems) {
             try {
-                await cartDB.addItemToCart(item); // Add the item to IndexedDB
+                await cartDB.addItemToCart(item); 
                 console.log(`Added ${item.name} to cart!`);
             } catch (error) {
                 console.error(`Error adding ${item.name} to cart:`, error);
             }
         }
     
-        // After adding all items, refresh the cart table
         populateCartTable();
     }
 
     // Add multiple test items to the cart (for testing purposes)
     addTestItems();
 
-    // Initialize the cart table
     populateCartTable();
 });
