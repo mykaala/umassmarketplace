@@ -1,0 +1,98 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #000; /* Black text */
+    margin: 20px;
+}
+
+.product-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image img {
+    width: 500px;
+    height: auto;
+    border: 2px solid #f6f5f5; /* UMass Amherst maroon */
+    border-radius: 4px;
+    max-height: 400px; /* Standardized container size */
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.thumbnail-image {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #f8f7f8; /* Maroon border */
+    border-radius: 4px;
+}
+
+.thumbnail-image:hover {
+    border-color: #b31b1b; /* Darker maroon */
+}
+
+.details-section {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 1.8em;
+    color: #000; /* Black */
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #000; /* Black */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    border: 1px solid #d3d3d3; /* Light border */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-condition,
+.product-seller,
+.product-brand {
+    margin-bottom: 10px;
+}
+
+.add-to-cart-button {
+    background-color: #ca1a2c; /* Initial color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button.added-to-cart {
+    background-color: #28a745; /* Color when item is added */
+    color: white;
+}
+
+.add-to-cart-button:hover {
+    background-color: #28a745; /* Darker maroon */
+}
+.add-to-cart-button.added-to-cart:hover {
+    background-color: #ca1a2c;
+}
