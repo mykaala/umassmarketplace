@@ -88,7 +88,6 @@ signInButton.addEventListener('click', () => {
     const signInContainer = document.getElementById('signInContainer');
     const inputs = signInContainer.querySelectorAll('.textBox');
     const feedbacks = signInContainer.querySelectorAll('.feedback');
-    console.log(inputs.length);
     inputs.forEach((input, index) => {
         const feedback = feedbacks[index];
         if (input.value.trim() === '') {
@@ -100,8 +99,7 @@ signInButton.addEventListener('click', () => {
             feedback.style.display = "none";
         }
     })
-    Sleep(100);
-    if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length = feedbacks.length) {
+    if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length === feedbacks.length) {
         alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
         passwordIn.value = '';
         usernameIn.value = '';
@@ -124,8 +122,7 @@ signUpButton.addEventListener('click', () => {
             feedback.style.display = "none";
         }
     })
-    Sleep(100);
-    if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length = feedbacks.length) {
+    if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length === feedbacks.length) {
         alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
         passwordIn.value = '';
         usernameIn.value = '';
