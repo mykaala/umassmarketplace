@@ -85,25 +85,54 @@ usernameUp.addEventListener("input", () => {
 })
 
 signInButton.addEventListener('click', () => {
-    if (!validUsername(usernameIn.value)) {
-        document.getElementById('usernameFeedback').style.display = "block";
-        document.getElementById('usernameFeedback').innerHTML = "Username should not be empty and it should only contain alphanumerical characters, dot, and underscore.";
-    } 
-    if (validUsername(usernameIn.value)) {
-        document.getElementById('usernameFeedback').style.display = "none";
+    const signInContainer = document.getElementById('signInContainer');
+    const inputs = signInContainer.querySelectorAll('.textBox');
+    const feedbacks = signInContainer.querySelectorAll('.feedback');
+    console.log(inputs.length);
+    inputs.forEach((input, index) => {
+        const feedback = feedbacks[index];
+        if (input.value.trim() === '') {
+            feedback.innerHTML = "This field is required.";
+            feedback.style.display = "block";
+        }
+        else {
+            feedback.innerHTML = "";
+            feedback.style.display = "none";
+        }
+    })
+    Sleep(100);
+    if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length = feedbacks.length) {
+        alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
+        passwordIn.value = '';
+        usernameIn.value = '';
     }
-    if (passwordIn.value.trim().length === 0) {
-        document.getElementById('passwordFeedback').style.display = "block";
-        document.getElementById('passwordFeedback').innerHTML = "This field should not be empty.";
-    } 
-    if (!passwordIsValid(passwordIn.value)) {
-        document.getElementById('passwordFeedback').style.display = "block";
-        document.getElementById('passwordFeedback').innerHTML = "The password should be at least 8 characters including at least one number, alphabet, and special character.";
+})
+
+signUpButton.addEventListener('click', () => {
+    const signUpContainer = document.getElementById('signUpContainer');
+    const inputs = signUpContainer.querySelectorAll('.textBox');
+    const feedbacks = signUpContainer.querySelectorAll('.feedback');
+    console.log(inputs.length);
+    inputs.forEach((input, index) => {
+        const feedback = feedbacks[index];
+        if (input.value.trim() === '') {
+            feedback.innerHTML = "This field is required.";
+            feedback.style.display = "block";
+        }
+        else {
+            feedback.innerHTML = "";
+            feedback.style.display = "none";
+        }
+    })
+    Sleep(100);
+    if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length = feedbacks.length) {
+        alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
+        passwordIn.value = '';
+        usernameIn.value = '';
+        repeatedPassword.value = '';
+        document.getElementById('venmo-input').value = '';
+        phoneInput.value = '';
+        emailInput.value = '';
     }
-    if (validUsername(usernameIn.value) && passwordIsValid(passwordIn.value)) {
-        alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`)
-    }
-    passwordIn.value = '';
-    usernameIn.value = '';
 })
 
