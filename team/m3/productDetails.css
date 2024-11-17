@@ -10,6 +10,7 @@ body {
     gap: 30px;
     max-width: 1200px;
     margin: auto;
+    margin-top: 40px;
 }
 
 .image-section {
@@ -21,7 +22,7 @@ body {
 .main-image img {
     width: 500px;
     height: auto;
-    border: 2px solid #4a0c32; /* UMass Amherst maroon */
+    border: 2px solid #f6f5f5; /* UMass Amherst maroon */
     border-radius: 4px;
     max-height: 400px; /* Standardized container size */
 }
@@ -36,7 +37,7 @@ body {
     width: 50px;
     height: auto;
     cursor: pointer;
-    border: 1px solid #4a0c32; /* Maroon border */
+    border: 1px solid #f8f7f8; /* Maroon border */
     border-radius: 4px;
 }
 
@@ -74,15 +75,24 @@ body {
 }
 
 .add-to-cart-button {
-    background-color: #4a0c32; /* Maroon */
-    color: #fff; /* White text */
-    border: none;
+    background-color: #ca1a2c; /* Initial color */
+    color: white;
     padding: 10px 20px;
-    border-radius: 4px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button.added-to-cart {
+    background-color: #28a745; /* Color when item is added */
+    color: white;
 }
 
 .add-to-cart-button:hover {
-    background-color: #b31b1b; /* Darker maroon */
+    background-color: #28a745; /* Darker maroon */
+}
+.add-to-cart-button.added-to-cart:hover {
+    background-color: #ca1a2c;
 }
