@@ -33,3 +33,77 @@ signUpTog.addEventListener('click', () => {
 })
 
 
+passwordUpInput.addEventListener("input", () => {
+    if (passwordIsValid(passwordUpInput.value)) { 
+        document.getElementById('passwordFeedback-up').style.display = "none";
+    }
+    else {
+        document.getElementById('passwordFeedback-up').style.display = "block";
+        document.getElementById('passwordFeedback-up').innerHTML = "Your password should be at least 8 characters long and contain at least one number, alphabet, and special character!";
+    }
+}
+)
+
+emailInput.addEventListener("input", () => {
+    if (validEmailFormat(emailInput.value)) {
+        document.getElementById('emailFeedback').style.display = "none";
+    }
+    else {
+        document.getElementById('emailFeedback').style.display = "block";
+        document.getElementById('emailFeedback').innerHTML = "Email should be of example@umass.edu format.";
+    }
+})
+
+repeatedPassword.addEventListener("input", () => {
+    if (passwordsMatch(passwordUpInput.value, repeatedPassword.value)) {
+        document.getElementById('confirmerFeedback').style.display = "none";
+    }
+    else {
+        document.getElementById('confirmerFeedback').style.display = "block";
+        document.getElementById('confirmerFeedback').innerHTML = "Passwords Don't Match.";
+    }
+})
+
+phoneInput.addEventListener("input", () => {
+    if (validPhoneFormat(phoneInput.value)) {
+        document.getElementById('phoneFeedback').style.display = "none";
+    }
+    else {
+        document.getElementById('phoneFeedback').style.display = "block";
+        document.getElementById('phoneFeedback').innerHTML = "Phone should be of the format (123) 456-7890.";
+    }
+})
+
+usernameUp.addEventListener("input", () => {
+    if (validUsername(usernameUp.value)) {
+        document.getElementById('usernameFeedback-up').style.display = "none";
+    }
+    else {
+        document.getElementById('usernameFeedback-up').style.display = "block";
+        document.getElementById('usernameFeedback-up').innerHTML = "Username should not be empty and it should only contain alphanumerical characters, dot, and underscore.";
+    }
+})
+
+signInButton.addEventListener('click', () => {
+    if (!validUsername(usernameIn.value)) {
+        document.getElementById('usernameFeedback').style.display = "block";
+        document.getElementById('usernameFeedback').innerHTML = "Username should not be empty and it should only contain alphanumerical characters, dot, and underscore.";
+    } 
+    if (validUsername(usernameIn.value)) {
+        document.getElementById('usernameFeedback').style.display = "none";
+    }
+    if (passwordIn.value.trim().length === 0) {
+        document.getElementById('passwordFeedback').style.display = "block";
+        document.getElementById('passwordFeedback').innerHTML = "This field should not be empty.";
+    } 
+    if (!passwordIsValid(passwordIn.value)) {
+        document.getElementById('passwordFeedback').style.display = "block";
+        document.getElementById('passwordFeedback').innerHTML = "The password should be at least 8 characters including at least one number, alphabet, and special character.";
+    }
+    if (validUsername(usernameIn.value) && passwordIsValid(passwordIn.value)) {
+        alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`)
+    }
+    passwordIn.value = '';
+    usernameIn.value = '';
+})
+
