@@ -41,6 +41,10 @@ passwordUpInput.addEventListener("input", () => {
             document.getElementById('confirmerFeedback').style.display = "block";
             document.getElementById('confirmerFeedback').innerHTML = "Passwords Don't Match.";
         }
+        else {
+            document.getElementById('confirmerFeedback').style.display = "none";
+            document.getElementById('confirmerFeedback').innerHTML = "";
+        }
     }
     else {
         document.getElementById('passwordFeedback-up').style.display = "block";
