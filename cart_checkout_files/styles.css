@@ -696,3 +696,95 @@ button {
         overflow-x: auto;
     }
 }
+
+@media (max-width: 404px) {
+    body, html {
+        overflow-x: hidden;
+    }
+
+    #top-half {
+        width: 100vw;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .overlay {
+        width: 70%;
+    }
+
+    .cart-container {
+        width: 100%;
+    }
+
+    #cart-title {
+        font-size: 30px;
+    }
+
+    .material-icons {
+        font-size: 35px;
+    }
+
+    #cart-info, #in-cart {
+        width: 100%;
+        padding: 5px;
+        min-height: 200px;
+    }
+
+    #button {
+        font-size: 16px;
+    }
+
+    #table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed; 
+        border-collapse: collapse;
+    }
+
+    thead {
+        display: block;
+        width: 100%;
+    }
+
+    tbody {
+        display: block;
+        width: 100%;
+        overflow-y: auto;
+        max-height: 200px;
+    }
+
+    tr {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 5px 2px;
+        text-align: center;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+    .col-empty {
+        width: 5%; 
+    }
+
+    .col-product, .col-price, .col-amount, .col-subtotal {
+        width: 23%; 
+    }
+
+    #first-row th {
+        font-size: 12px;
+        padding: 5px 2px;
+    }
+
+    #table-container {
+        overflow-x: auto;
+    }
+}
