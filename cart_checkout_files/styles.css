@@ -1,9 +1,9 @@
-/* General Reset */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+   
+
 }
 
 .container {
@@ -30,7 +30,7 @@ html, body {
     height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Ensure it starts from the top */
+    justify-content: flex-start; 
 }
 
 .cart-container {
@@ -76,9 +76,9 @@ html, body {
     text-align: center;
     position: relative;
     z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensure the middle icon is bigger */
 .step-1 {
     background-color: #ff937b;
 }
@@ -96,7 +96,6 @@ html, body {
     cursor: pointer;
 }
 
-/* Progress Bar Styles */
 .progress-bar {
     position: absolute;
     width: 100%;
@@ -126,7 +125,7 @@ html, body {
     border-radius: 8px;
     z-index: 10;
     display: flex;
-    flex-direction: row; /* Change to row layout */
+    flex-direction: row; 
     justify-content: space-between;
     align-items: flex-start;
     gap: 5%;
@@ -137,7 +136,7 @@ html, body {
     width: 66%;
     min-height: 370px;
     max-height: 500px;
-    background-color: #ebac9c;
+    background-color: #ffe8e3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -150,8 +149,8 @@ html, body {
 #in-cart {
     width: 33%;
     height: 260px;
-    flex-grow: 1;       /* Allow it to grow within the parent container */
-    background-color: #ebac9c;
+    flex-grow: 1;       
+    background-color: #ffe8e3;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 10px;
@@ -165,7 +164,7 @@ html, body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 20px;  /* Adds space between the items */
+    gap: 30px;  
     width: 80%;
     height: 100%;
 }
@@ -174,14 +173,14 @@ html, body {
 #subtotal,
 #total {
     display: flex;
-    justify-content: space-between; /* Ensures label and value are on the same line */
+    justify-content: space-between; 
     width: 100%;
     font-size: 20px;
 }
 
 #cart-total {
     font-size: 15px;
-    height: 50px;  /* Add a fixed height */
+    height: 50px;  
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -206,11 +205,11 @@ html, body {
 #button {
     background-color: #881c1c;
     width: 100%;  /* Button now takes 90% of the parent container's width */
-    height: 50px;  /* Set a specific height for the button */
+    height: 60px;  /* Set a specific height for the button */
     border-radius: 12px;
     border: none;
     font-family: 'Mulish', 'sans-serif';
-    font-size: 18px;
+    font-size: 20px;
     transition: opacity 0.25s ease;
     color: white;
     display: flex;
@@ -232,7 +231,6 @@ html, body {
 
 /* Table Styles */
 /* Table Styles */
-/* Table Styles */
 #table {
     width: 100%;
     max-height: 100%;       /* Limit the height of the table */
@@ -251,7 +249,6 @@ html, body {
 #table-body tr {
     height: 80px; /* Set the height of each table row */
 }
-
 
 /* Table Container Styles */
 #table-container {
@@ -282,7 +279,6 @@ html, body {
     width: 20%;
 }
 
-
 button {
     background: transparent;
     border: none;
@@ -292,6 +288,255 @@ button {
     transform: translateY(4%);
 }
 
-button .material-symbols-outlined {
-    color: black;  /* You can set the color you prefer */
+#table-body td {
+    font-family: 'Mulish', sans-serif; 
+    font-size: 16px;  
+    font-weight: 300; 
+    color: #333; 
+}
+
+#table-body .product-name {
+    font-family: 'Roboto Condensed', sans-serif;  
+    font-size: 18px;  
+    font-weight: 500;  
+}
+
+#subtotal, #total {
+    font-family: 'Mulish', sans-serif;  
+    font-size: 18px; 
+    font-weight: 300;  
+}
+
+#subtotal .value, #total .value {
+    font-family: 'Roboto Condensed', sans-serif;  
+    font-size: 20px;  
+    font-weight: 500;  
+}
+
+/* Media Queries for Responsiveness */
+
+/* Smaller screens (Tablets, Phones) */
+@media (max-width: 768px) {
+    .cart-container {
+        display: flex;
+        flex-direction: column; /* Stack cart divs vertically */
+        align-items: center;
+        gap: 20px; /* Adds space between child elements */
+        width: 100%; /* Ensure it takes full width */
+    }
+
+    #cart-title {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        font-weight: bold;
+    }
+
+    .status-container {
+        width: 90%; /* Ensure it takes up a reasonable portion of the screen */
+        height: auto; /* Let the height adjust based on content */
+        margin-top: 10px; /* Add margin on top to space it from other elements */
+        padding: 10px 0; /* Add padding if necessary */
+        overflow: hidden; /* Hide any unwanted overflow */
+        display: flex;
+        justify-content: space-between; /* Keep the icons spaced out */
+        align-items: center; /* Center the icons vertically */
+        position: relative;
+    }
+
+    .material-icons {
+        font-size: 40px; /* Icon size */
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #b1b3b3;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+    }
+
+    .step-1 {
+        background-color: #ff937b;
+    }
+
+    .step-1:hover {
+        cursor: pointer;
+    }
+
+    .step-2 {
+        background-color: #ff937b;
+        font-size: 300% !important;
+    }
+
+    .step-3:hover {
+        cursor: pointer;
+    }
+
+    /* Adjust overlay properties */
+    .overlay {
+        width: 90%; /* Ensure overlay takes most of the screen width */
+        min-height: 400px; /* Ensure it has enough height */
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: flex-start;
+        display: flex;
+        margin: 0 auto; /* Center the overlay horizontally */
+        overflow: visible;
+    }
+
+    /* Ensure cart-info and in-cart are centered and properly sized */
+    #cart-info, #in-cart {
+        width: 100%; /* Ensure full width */
+        min-height: 300px; /* Adjust minimum height */
+        max-height: 450px; /* Adjust maximum height */
+        margin: 0 auto; /* Center the divs horizontally */
+        margin-top: -40px; /* Adjust top margin */
+        margin-bottom: 20px; /* Optional: space between divs */
+        padding: 20px; /* Ensure padding inside the boxes */
+        box-sizing: border-box; /* Include padding in the total width */
+    }
+
+
+    #table-container {
+        width: 100%;
+        overflow-x: hidden; /* Hide horizontal overflow */
+    }
+
+    #table {
+        max-height: 300px; /* Limit the height of the table on small screens */
+        overflow-x: hidden; /* Hide any horizontal overflow */
+    }
+
+    #button {
+        width: 100%;
+        height: 55px; /* Adjust button height */
+    }
+}
+
+
+/* Extra small screens (Mobile Phones) */
+@media (max-width: 480px) {
+    .cart-container {
+        width: 100%;
+    }
+
+    #cart-title {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+
+    .material-icons {
+        font-size: 35px; /* Adjust icon size further */
+    }
+
+    #table-container {
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    #button {
+        font-size: 16px; /* Make button text smaller */
+    }
+
+    .overlay {
+        width: 100%; /* Make overlay take full width */
+        padding: 10px; /* Reduce padding */
+    }
+
+    #cart-info, #in-cart {
+        width: 100%;
+        padding: 5px; /* Reduce padding for mobile */
+        min-height: 200px;
+    }
+
+    #table th, #table td {
+        padding: 10px; /* Smaller padding for mobile devices */
+    }
+}
+
+@media (max-width: 425px) {
+    
+    body, html {
+        overflow-x: hidden;  
+    }
+
+    #top-half {
+        width: 100%;
+        padding: 0 10px; 
+        box-sizing: border-box; 
+    }
+
+    #cart-info, #in-cart {
+        width: 90%;  
+        margin: 0 auto;  
+        padding: 0 10px; 
+        box-sizing: border-box;
+        max-width: 100%;  
+        overflow-x: hidden;  
+    }
+
+    #cart-title {
+        font-size: 50px;  
+    }
+}
+
+
+
+@media (max-width: 320px) {
+    #top-half {
+        width: 100% vw;
+        padding: 0 10px; 
+        box-sizing: border-box; 
+    }
+
+    
+
+    .overlay {
+        width: 70%;
+    }
+}
+
+@media (max-width: 375px) {
+    #top-half {
+        width: 100% vw;
+    }
+}
+
+@media (max-width: 979px) {
+    #cart-total {
+        font-size: 13px;
+    }
+
+    #cart-total .label {
+        font-size: 12px;  /* Adjust label size */
+    }
+    #cart-total .value {
+        font-size: 14px;  /* Adjust value size */
+    }
+
+    /* Adjust font size for the subtotal label and value */
+    #subtotal .label {
+        font-size: 12px;  /* Adjust label size */
+    }
+    #subtotal .value {
+        font-size: 14px;  /* Adjust value size */
+    }
+
+    #total .value {
+        font-size: 14px;
+    }
+
+    #total .label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 321) {
+    table {
+        font-size: 1px;
+    }
+
+    th, td {
+        font-size: px;
+        padding: 4px;
+    }
 }
