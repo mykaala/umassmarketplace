@@ -1,14 +1,15 @@
+/* General Reset */
 html, body {
     height: 100%;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
 .container {
-    height: 100%; 
-    display: flex; 
-    flex-direction: column; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #top-half, #bottom-half {
@@ -18,17 +19,18 @@ html, body {
 #top-half {
     background-color: #881c1c;
     height: 40%;
-    width: 100% vw;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 #bottom-half {
     background-color: white;
     height: 60%;
-    width: 100% vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure it starts from the top */
 }
 
 .cart-container {
@@ -38,7 +40,7 @@ html, body {
     justify-content: center;
     align-items: center;
     color: white;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     margin-top: 2px;
 }
 
@@ -48,7 +50,6 @@ html, body {
     font-family: 'Mulish', sans-serif;
     letter-spacing: 1.2px;
     padding-top: 30px;
-    
 }
 
 .status-container {
@@ -56,15 +57,15 @@ html, body {
     height: 80px;
     text-align: center;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    gap: 10px; 
-    position: relative; 
+    gap: 10px;
+    position: relative;
     width: 60%;
     margin-top: 3%;
-    /* background-color: black; */
 }
 
+/* Icon styles */
 .material-icons {
     font-size: 50px;
     padding: 3%;
@@ -74,7 +75,25 @@ html, body {
     display: inline-block;
     text-align: center;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
+}
+
+/* Ensure the middle icon is bigger */
+.step-1 {
+    background-color: #ff937b;
+}
+
+.step-1:hover {
+    cursor: pointer;
+}
+
+.step-2 {
+    background-color: #ff937b;
+    font-size: 300% !important;
+}
+
+.step-3:hover {
+    cursor: pointer;
 }
 
 /* Progress Bar Styles */
@@ -82,54 +101,38 @@ html, body {
     position: absolute;
     width: 100%;
     height: 5px;
-    background-color: #b1b3b3; 
-    top: 40px; 
+    background-color: #b1b3b3;
+    top: 40px;
     left: 0;
-    z-index: 0; 
+    z-index: 0;
 }
 
 .fill {
     height: 100%;
     background-color: #ff937b;
-    width: 50%; 
+    width: 50%;
     transition: width 0.3s ease-in-out;
 }
-
-/* Step 1 and Step 2 icon color */
-.step-1,
-.step-2 {
-    background-color: #ff937b;
-}
-
-
-i.step-2 {
-   padding: 3.3%;
-   font-size: 3.47vw;
-}
-
-
-/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .overlay {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, 4%);
-    width: 70%; /* Make sure this is wide enough */
-    min-height: 70%; /* Ensure this gives the container enough height */
-    height: auto;
+    width: 70%;
+    height: 70%;  /* Set a specific height to control the space */
+    min-height: 70%;  /* Ensure it doesn't shrink smaller than 70% of the parent */
     padding: 20px;
     border-radius: 8px;
     z-index: 10;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between children */
     align-items: flex-start;
-    gap: 20%; 
+    gap: 5%;
 }
 
 #cart-info {
-    width: 66%; 
+    width: 66%;
     min-height: 370px;
     max-height: 500px;
     background-color: #ff937b;
@@ -139,28 +142,68 @@ i.step-2 {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 10px;
+    flex-direction: column;
 }
 
 #in-cart {
-    width: 40%; 
-    height: 220px;
+    width: 35%;
+    height: 40%;  /* Fixed height for the parent */
     background-color: #ff937b;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Space out the children */
+    align-items: center;             /* Centers all items horizontally */
 }
 
 #contents {
     display: flex;
     flex-direction: column;
-    text-align: left; 
-    padding-top: 23px;
+    text-align: left;
+    gap: 20px;  /* Adds space between the items */
+    width: 80%;
+    height: 100%;
 }
 
+#cart-total,
+#subtotal,
+#total {
+    display: flex;
+    justify-content: space-between; /* Ensures label and value are on the same line */
+    width: 100%;
+    font-size: 20px;
+}
+
+#cart-total {
+    font-size: 15px;
+    height: 50px;  /* Add a fixed height */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#subtotal .label, 
+#total .label {
+    color: rgb(149, 147, 147);
+    font-size: 16px;
+}
+
+#subtotal .value, 
+#total .value {
+    font-size: 16px;
+}
+
+#total .value {
+    font-weight: bold;
+}
+
+/* Button Styles */
 #button {
     background-color: #881c1c;
-    width: 93%; /* Adjust width to a percentage */
-    height: 40px;
+    width: 100%;  /* Button now takes 90% of the parent container's width */
+    height: 50px;  /* Set a specific height for the button */
     border-radius: 12px;
     border: none;
     font-family: 'Mulish', 'sans-serif';
@@ -170,12 +213,10 @@ i.step-2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: -10% auto 0 auto; /* Adjust margin as a percentage */
-    /* Optionally, set position to absolute to control placement relative to the container */
-    position: relative;
-    top: 10%; /* Position it relative to its parent container */
+    margin-top: auto;  /* Keeps the button at the bottom of the container */
+    margin-bottom: 10px;  /* Adds some space below the button */
+    padding: 0;  /* Ensures no additional padding inside the button, only content space */
 }
-
 
 #button:hover {
     cursor: pointer;
@@ -186,20 +227,56 @@ i.step-2 {
     opacity: 0.56;
 }
 
-#cart-total {
-    transform: translate(3%, -100%);
-    /* margin: 10px 10px;  */
+/* Table Styles */
+#table {
+    width: 100%;             /* Full width of the container */
+    height: 100%;            /* Full height of the container */
+    table-layout: auto;      /* Allow dynamic sizing of columns */
+    border-collapse: collapse;
+    overflow: hidden;
 }
 
-#subtotal {
-   transform: translate(3%, -270%);
-   /* margin: 10px 10px;  */
+#table th, #table td {
+    padding: 20px;  /* Reduced padding for better visibility */
+    text-align: left;
+    vertical-align: middle;  /* Center content vertically */
+    border-bottom: 1px solid #ccc;
 }
 
-#total {
-    transform: translate(3%, -300%);
-    /* margin: 10px 10px;  */
+#table tr:not(:first-child) td,
+#table tr:not(:first-child) th {
+    padding: 70px;  /* Increased padding for non-first rows */
 }
 
+#table tr:first-child td,
+#table tr:first-child th {
+    padding: 10px;  /* Default padding for the first row */
+}
 
- 
+/* Table Container Styles */
+#table-container {
+    width: 100%;
+    max-height: 300px; /* Maximum height of the table */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    border-radius: 10px;
+}
+
+.col-empty {
+    width: 5%;  /* Empty column for spacing */
+}
+
+.col-product {
+    width: 40%; /* Wider column for product names */
+}
+
+.col-price {
+    width: 15%;
+}
+
+.col-amount {
+    width: 20%;
+}
+
+.col-subtotal {
+    width: 20%;
+}
