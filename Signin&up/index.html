@@ -4,20 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in/Sign up</title>
+	<link rel="stylesheet" href="/navbar/navbar-styles.css" />
     <script type="module" src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="/navbar/navbar-import.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="navbar-menu">
-            <li class="navbar-item"><a href="#home">UKart</a></li>
-            <li class="navbar-item"><a href="#home">Main</a></li>
-            <li class="navbar-item"><a href="#about">Cart</a></li>
-        </ul>
-    </nav>
-
-    <div id="backgroundCircle">
-    </div>
+    <div id="navbar-container"></div>
+    <div id="backgroundCircle"></div>
     <div id="container">
         <div id="toggle">
             <input type="button" value="Sign In" class="button" id="signInTog">
@@ -28,28 +22,38 @@
             <form class="form">
                 <label id="username-label">Username: </label>
                 <input type="text" required placeholder="Please enter your Username here" id="username-input" class="textBox"> 
-
+                <p id="usernameFeedback" class="feedback"></p>
                 <label id="password-label">Password: </label>
                 <input type="text" required placeholder="Please enter your password here" id="password-input" class="textBox">
+                <p id="passwordFeedback" class="feedback"></p>
                 <input type="button" value="Sign In" id="sign-in-button" class="button"> 
             </form>
         </div>
         <div id="signUpContainer">
             <form class="form">
                 <label id="username-label">Username: </label>
-                <input type="text" required placeholder="Please enter your Username here" id="username-input" class="textBox"> 
+                <input type="text" required placeholder="Please enter your Username here" id="username-input-up" class="textBox">
+                <p id="usernameFeedback-up" class="feedback">Is Not Valid</p>
 
                 <label id="password-label">Password: </label>
-                <input type="text" required placeholder="Please enter your password here" id="password-input" class="textBox"> 
+                <input type="text" required placeholder="Please enter your password here" id="password-input-up" class="textBox">
+                <p id="passwordFeedback-up" class="feedback"></p>
 
                 <label id="confirmer">Confirm your password: </label>
-                <input type="text" required placeholder="Please re-enter your password" id="password-input" class="textBox">
+                <input type="text" required placeholder="Please re-enter your password" id="password-reinput" class="textBox">
+                <p id="confirmerFeedback" class="feedback"></p>
 
                 <label id="venmoID">Venmo: </label>
                 <input type="text" required placeholder="Please enter your Venmo" id="venmo-input" class="textBox">
+                <p id="venmoFeedback" class="feedback"></p>
+
+                <label id="phoneNumber">Phone Number: </label>
+                <input type="text" required placeholder="Please enter your phone number" id="phone-input" class="textBox">
+                <p id="phoneFeedback" class="feedback"></p>
 
                 <label id="email">Email: </label>
                 <input type="text" required placeholder="Please enter your email" id="email-input" class="textBox">
+                <p id="emailFeedback" class="feedback"></p>
                 <input type="button" value="Sign Up" id="sign-up-button" class="button">
             </form>
         </div>

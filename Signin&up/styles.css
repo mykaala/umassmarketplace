@@ -1,13 +1,21 @@
-body {
+html, body {
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
 }
 
 #container {
-    margin-top: 25vh;
+    position: absolute;
+    top: 25vh;
+    margin-bottom: 25vh;
+    overflow: visible;
     background-color:#b1b3b3;
     border-radius: 10% 10% 10% 10%;
     display: flex;
@@ -63,19 +71,25 @@ body {
     max-width: 400px;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 5vh;
+    margin-top: 2.5vh ;
+    margin-bottom: 2.5vh;
     margin-left: 10vh;
     margin-right: 10vh;
 }
 
+.form label {
+    margin-top:2vh ;
+}
+
 #backgroundCircle {
-    position: absolute;
+    margin-top: 0;
+    position: fixed;
     background-color: #881c1c;
-    width: 50vw;
-    height: 100vW;
-    border-radius: 50% 0% 0% 50%;   
+    width: 50%;
+    border-radius: 48% 0% 0% 48%;   
     margin-right:-50%;
     z-index: -1;
+    min-height: 100%;
 }
 
 .button {
@@ -146,4 +160,13 @@ nav {
     .navbar-item {
         margin: 1vw 0;
     }
+}
+
+.feedback {
+    height: 0.5vh;
+    margin-top: 0;
+    margin-bottom: 2vh;
+    color: red;
+    font-size: 0.8em;
+    display: none;
 }
