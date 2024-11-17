@@ -36,6 +36,11 @@ signUpTog.addEventListener('click', () => {
 passwordUpInput.addEventListener("input", () => {
     if (passwordIsValid(passwordUpInput.value)) { 
         document.getElementById('passwordFeedback-up').style.display = "none";
+        document.getElementById('passwordFeedback-up').innerHTML = "";
+        if (!passwordsMatch(passwordUpInput.value, repeatedPassword.value)) {
+            document.getElementById('confirmerFeedback').style.display = "block";
+            document.getElementById('confirmerFeedback').innerHTML = "Passwords Don't Match.";
+        }
     }
     else {
         document.getElementById('passwordFeedback-up').style.display = "block";
@@ -47,6 +52,7 @@ passwordUpInput.addEventListener("input", () => {
 emailInput.addEventListener("input", () => {
     if (validEmailFormat(emailInput.value)) {
         document.getElementById('emailFeedback').style.display = "none";
+        document.getElementById('emailFeedback').innerHTML = "";
     }
     else {
         document.getElementById('emailFeedback').style.display = "block";
@@ -57,6 +63,7 @@ emailInput.addEventListener("input", () => {
 repeatedPassword.addEventListener("input", () => {
     if (passwordsMatch(passwordUpInput.value, repeatedPassword.value)) {
         document.getElementById('confirmerFeedback').style.display = "none";
+        document.getElementById('confirmerFeedback').innerHTML = "";
     }
     else {
         document.getElementById('confirmerFeedback').style.display = "block";
@@ -67,6 +74,7 @@ repeatedPassword.addEventListener("input", () => {
 phoneInput.addEventListener("input", () => {
     if (validPhoneFormat(phoneInput.value)) {
         document.getElementById('phoneFeedback').style.display = "none";
+        document.getElementById('phoneFeedback').innerHTML = "";
     }
     else {
         document.getElementById('phoneFeedback').style.display = "block";
@@ -77,6 +85,7 @@ phoneInput.addEventListener("input", () => {
 usernameUp.addEventListener("input", () => {
     if (validUsername(usernameUp.value)) {
         document.getElementById('usernameFeedback-up').style.display = "none";
+        document.getElementById('usernameFeedback-up').innerHTML = "";
     }
     else {
         document.getElementById('usernameFeedback-up').style.display = "block";
@@ -110,22 +119,23 @@ signUpButton.addEventListener('click', () => {
     const signUpContainer = document.getElementById('signUpContainer');
     const inputs = signUpContainer.querySelectorAll('.textBox');
     const feedbacks = signUpContainer.querySelectorAll('.feedback');
-    console.log(inputs.length);
     inputs.forEach((input, index) => {
         const feedback = feedbacks[index];
         if (input.value.trim() === '') {
             feedback.innerHTML = "This field is required.";
             feedback.style.display = "block";
         }
-        else {
+        else if (feedback.innerHTML == "This field is required." || feedback.innerHTML == "") {
             feedback.innerHTML = "";
             feedback.style.display = "none";
         }
+        console.log(feedback.style.display);
     })
+    console.log(Array.from(feedbacks).filter(feedback => feedback.style.display === "none").length);
     if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length === feedbacks.length) {
         alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
-        passwordIn.value = '';
-        usernameIn.value = '';
+        passwordUpInput.value = '';
+        usernameUp.value = '';
         repeatedPassword.value = '';
         document.getElementById('venmo-input').value = '';
         phoneInput.value = '';
