@@ -282,3 +282,23 @@ html, body {
 .col-subtotal {
     width: 20%;
 }
+
+.material-symbols-outlined {
+    font-size: 24px;     /* Adjust the size of the icon */
+    color: #ff0000;      /* Change the color to red */
+    cursor: pointer;     /* Make it look clickable */
+    transition: transform 0.2s ease;
+}
+
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transform: translateY(23%);
+}
+
+button .material-symbols-outlined {
+    color: black;  /* You can set the color you prefer */
+}
