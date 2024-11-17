@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const tableBody = document.querySelector("#table-body");
             tableBody.innerHTML = "";  // Clear any existing rows
 
+            let subtotal = 0;  // Initialize subtotal
+            let total = 0;  // Initialize total (you can add additional calculations here)
+
             // If there are no items in the cart, display an empty message
             if (items.length === 0) {
                 const emptyRow = document.createElement("tr");
@@ -52,12 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Subtotal column
                     const subtotalCell = document.createElement("td");
-                    subtotalCell.textContent = `$${(item.price * item.amount).toFixed(2)}`;
+                    const itemSubtotal = item.price * item.amount;
+                    subtotalCell.textContent = `$${itemSubtotal.toFixed(2)}`;
                     row.appendChild(subtotalCell);
 
                     tableBody.appendChild(row);  // Append the row to the table body
+
+                    // Update the subtotal and total
+                    subtotal += itemSubtotal;
+                    total += itemSubtotal;  // You can adjust the total calculation as needed (e.g., with taxes or discounts)
                 });
             }
+
+            // Now update the subtotal and total values in the Cart Info section
+            updateCartInfo(subtotal, total);
+
         } catch (error) {
             console.error("Error loading cart items:", error);
         }
@@ -74,47 +86,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Function to update the Cart Info (Subtotal and Total)
+    function updateCartInfo(subtotal, total) {
+        const subtotalElement = document.querySelector("#subtotal .value");
+        const totalElement = document.querySelector("#total .value");
+
+        // Update subtotal and total values
+        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        totalElement.textContent = `$${total.toFixed(2)}`;
+    }
+
     // Function to add multiple test items to the cart
     async function addTestItems() {
         const testItems = [
-            {
-                id: 1,
-                name: "Product A",
-                price: 10.99,
-                amount: 2
-            },
-            {
-                id: 2,
-                name: "Product B",
-                price: 5.49,
-                amount: 3
-            },
-            {
-                id: 3,
-                name: "Product C",
-                price: 15.75,
-                amount: 1
-            },
-            {
-                id: 4,
-                name: "Product D",
-                price: 7.99,
-                amount: 4
-            },
-            {
-                id: 5,
-                name: "Product E",
-                price: 12.50,
-                amount: 2
-            }
+            { id: 1, name: "Product A", price: 10.99, amount: 2 },
+            { id: 2, name: "Product B", price: 5.49, amount: 3 },
+            { id: 3, name: "Product C", price: 15.75, amount: 1 },
+            { id: 4, name: "Product D", price: 7.99, amount: 4 },
+            { id: 5, name: "Product E", price: 12.50, amount: 2 },
+            { id: 6, name: "Product F", price: 16.50, amount: 1 },
         ];
-
+    
+        // Add test items to the cart
         for (const item of testItems) {
-            await cartDB.addItemToCart(item);
-            console.log(`Added ${item.name} to cart!`);
+            try {
+                await cartDB.addItemToCart(item); // Add the item to IndexedDB
+                console.log(`Added ${item.name} to cart!`);
+            } catch (error) {
+                console.error(`Error adding ${item.name} to cart:`, error);
+            }
         }
-
-        // Refresh the cart table after adding items
+    
+        // After adding all items, refresh the cart table
         populateCartTable();
     }
 
