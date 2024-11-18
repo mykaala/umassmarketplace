@@ -67,10 +67,15 @@ Milestone #3
 
 ## Aryan Vakil - Communications specialist
 - **Role**: Set up a group chat for better communication between team members, ensuring respectful communication between the group members.
-- **Top Commits**:
+- **Milestone 2 - Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/fd32d617ed9ae847ba22e09cd0836e0c0ef91d0d): added people to the group chat
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/f47c5b089965d4f9683e72ed71a7b463482a1be6): Ensured group members interacted respectfully
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/688b0a09ad8ae5ff65dbb55885b9957b86251dfa): completed and formatted the users.md file as requested.
+
+- **Milestone 3 - Top Commits**:
+- 1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/f21aa3e6bda4a299fd0b94e77ca897709f985797): Added nav bar used in other pages, fixed some issues in design, added input validating functions to utilts.js.
+  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/6ad38261db456afe478d6bd697117db3ab51d468): Added feedback functionality for when the textboxes are not satisfied using a loop. Also, made sure that they the most up to date feedback fields.
+  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/63aa980f51a1ef1a6ae2a5d48a6f535ece02021f): Added nav bar and resolved some of the issues of the design such as min size for the sign-in and sign out bar.
 
 ## Ayushman Satpathy - Meeting Planner
 - **Role**: Coordinate schedules and manage appointments with our intuitive meeting planner, designed to streamline collaboration and enhance productivity.
