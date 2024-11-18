@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Product Posting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../navbar/navbar-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="navbar-container"></div>
+        <h1>Product for Sale</h1>
+        <form id="product-form" onsubmit="return validateForm()" novalidate>
+            <div class="form-section">
+                <label for="product-title">Product Title</label>
+                <input type="text" id="product-title" class="text-input" placeholder="Enter product title" required>
+                <span id="product-title-error" class="error-message"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-section">
+                    <label for="category">Category</label>
+                    <select id="category" class="text-input" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="vehicles">Vehicles</option>
+                        <option value="books">Books</option>
+                        <option value="school-supplies">School Supplies</option>
+                        <option value="home-garden">Home & Garden</option>
+                        <option value="sports">Sports & Outdoors</option>
+                        <option value="toys">Toys & Games</option>
+                        <option value="services">Services</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span id="category-error" class="error-message"></span>
+                </div>
+                <div class="form-section">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" class="text-input" placeholder="Price" required pattern="^\d+(\.\d{1,2})?$">
+                    <span id="price-error" class="error-message"></span>
+                </div>
+            </div>
+            <div class="form-section">
+                <label for="description">Description</label>
+                <textarea id="description" class="text-input" placeholder="Describe the product in detail" required></textarea>
+            </div>
+            <div class="form-section">
+                <label for="product-image">Product Image</label>
+                <input type="file" id="product-image" class="file-input" accept="image/*" onchange="previewImage(event)" required>
+                <div id="image-preview" class="image-preview"></div>
+            </div>
+            <div class="form-section">
+                <label>Condition</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="new" name="condition" value="new" required>
+                    <label for="new">New</label>
+
+                    <input type="radio" id="used" name="condition" value="used">
+                    <label for="used">Used</label>
+                </div>
+                <span id="condition-error" class="error-message"></span>
+            </div>
+            <div class="form-section">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" class="text-input" placeholder="Your email address" required>
+                <span id="email-error" class="error-message"></span>
+            </div>
+            <div class="form-section">
+                <label for="contact-phone">Phone/Text</label>
+                <input type="tel" id="contact-phone" class="text-input" placeholder="Your phone number">
+                <span id="phone-error" class="error-message"></span>
+            </div>
+            <button type="submit" class="submit-button">Continue</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
