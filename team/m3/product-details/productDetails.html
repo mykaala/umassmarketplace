@@ -5,21 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - EPOMAKER x Aula F75 Keyboard</title>
     <link rel="stylesheet" href="productDetails.css">
-    <link rel="stylesheet" href="navbar/navbar-styles.css">
+    <link rel="stylesheet" href="../navbar/navbar-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Include the navbar -->
-    <div id="navbar-container">
-        <div class="navbar-container">
-		<a href="#" class="logo">UKart</a>
-		<ul class="nav-links">
-			<li><a href="#">Cart</a></li>
-			<li><a href="#">Profile</a></li>
-			<li><a href="#" class="btn-signup">Join</a></li>
-		</ul>
-	</div></div>
-
+    <div id="navbar-container"></div>
     <div class="product-container">
         <div class="image-section">
             <div class="main-image">
@@ -48,15 +38,7 @@
     
     </script>
     <script src="script.js"></script>
-    <script>
-        // Use fetch to load the navbar HTML
-        fetch('navbar/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-    </script>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cartButton = document.getElementById('add-to-cart-button');
