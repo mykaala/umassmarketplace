@@ -15,3 +15,7 @@ Meanwhile, there are some people, including UMass graduates. who are leaving Amh
 
 This group is essential to UMassMarketPlace because they form the majority of residents of the town of Amherst and also in most cases seek to obtain goods with spending less money. 
 We understand that managing finances can be challenging at the beginning and believe our application provides users with an opportunity to access goods and services with a more affordable price. Moreover, the application would reduce the waste and contribute towards the common goal of preserving the environment with reusing the reusable goods. 
+
+## How we Adress These Needs
+
+We created an application that allows users to easily browse items, add them to their cart, and view their selections with real-time updates. Each time the page is loaded or refreshed, the application checks the database to retain any previously added items in the cart. Users have the option to remove items from their cart as needed. When a transaction is completed, both parties receive each other's contact information to facilitate communication. The interface is designed to guide users through a seamless shopping process, addressing their core needs for a simple, intuitive, and efficient experience.
