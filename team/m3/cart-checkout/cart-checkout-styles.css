@@ -5,6 +5,10 @@ html, body {
     overflow-x: hidden;
 }
 
+a {
+    font-size: inherit; 
+}
+
 .container {
     height: 100%;
     display: flex;
@@ -336,20 +340,25 @@ button {
     }
 
     .material-icons {
-        font-size: 40px; 
-        padding: 10px;
+        font-size: 50px; /* default size for all icons */
+        padding: 3%;
         border-radius: 50%;
         background-color: #b1b3b3;
         color: white;
         display: inline-block;
         text-align: center;
         position: relative;
+        z-index: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
-
-    .step-1 {
+    
+    .material-icons .step-1 {
         background-color: #ff937b;
+        font-size: 40px;
+        padding: 10px;
+        border-radius: 50%;
     }
-
+    
     .step-1:hover {
         cursor: pointer;
     }
