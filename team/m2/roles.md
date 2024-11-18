@@ -9,10 +9,17 @@
 
 ## Ali Ayaan Rizvi - Project Manager 
 - **Role**: Led team in planning and executing the web app marketplace project, ensuring effective communication, resource management, and timely delivery of results.
+
+Milestone 2: 
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9df00529270a0f68643fb57772e7da5f6e5c2ff8): Researched and outlined the data we will be handling for this project in data.md
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5ba893c25624cde15948e3d0c421550d480d25b7): Added the team, m2 and reports folder
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/32b9f2995a8beab155021401dcaefde67d4b09e8): Create a detailed project plan that includes timelines, milestones, and resource allocation.
+
+Milestone 3:
+1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9b0890e6df6e114c718f028e94f17d5ae53f3fb7): Finished fundamental boiler plate code for Product Details Page.
+  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/740b831320a4c4bfc8180c3ae96711953c3e34fa): Implemented "add to cart" feature in product details page where user can add or remove a specific product to cart.
+  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/e3f088211d23d22641aa30e43e1370c7c44b0603): Implemented NavBar to allow for seamless transition between pages. Linked each navbar icon to corresponding html page.
 
  
 
