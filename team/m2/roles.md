@@ -25,11 +25,17 @@ Milestone 3:
  
 
 ## Kevin Mathew - Time-Keeper 
-- **Role**: Responsible for tracking time during meetings, providing reminders, and ensuring tasks were completed within deadlines to keep the team on schedule.
-- Milestone 2:
+**Role**: Responsible for tracking time during meetings, providing reminders, and ensuring tasks were completed within deadlines to keep the team on schedule.
+Milestone 2:
 - **Top Commits**:
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/eb1dbc4ffca9afb8d868643e3e7daf2d4afa66dc): Created features.md file
-  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/1a455d73c6f66ebb94fedd65b85fb663e2c72c4f): Kept team on track to meet project deliverables and expectations. 
+  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/1a455d73c6f66ebb94fedd65b85fb663e2c72c4f): Kept team on track to meet project deliverables and expectations.
+
+Milestone 3:
+- **Top Commits**:
+  1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/ce521d9beb025b3083e6e82e3b4a935e21624133): Created HTML file, with necessary entries for a product listing for user to fill out.
+  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/d8529cff2e2dfaf382e0521970c596b61a4cda06): Created CSS Styling to create a responsive display and have a user interface that corresponds with UMass colors.
+  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/a678731869c65af96cdc62809f7c8ad0e14dd57f): Created validation functionality to ensure all user entries met the specified parameters.
 
 
 
