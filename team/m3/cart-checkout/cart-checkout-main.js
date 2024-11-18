@@ -1,7 +1,7 @@
-import { CartDB } from '../src/js/CartDB.js';
+import { CartDB } from '../home-and-profile/home-src/js/CartDB.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-    const cartDB = new CartDB("myCartDB");  
+    const cartDB = new CartDB("myCartDB");
 
     async function populateCartTable() {
         try {
@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const tableBody = document.querySelector("#table-body");
             tableBody.innerHTML = "";  
 
-            let subtotal = 0;  
-            let total = 0;  
+            let subtotal = 0;
+            let total = 0;
 
             if (items.length === 0) {
                 const emptyRow = document.createElement("tr");
@@ -37,31 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     productCell.textContent = item.name;
                     row.appendChild(productCell);
 
-                
                     const priceCell = document.createElement("td");
                     priceCell.textContent = `$${item.price.toFixed(2)}`;
                     row.appendChild(priceCell);
 
-                   
                     const amountCell = document.createElement("td");
                     amountCell.textContent = item.amount;
                     row.appendChild(amountCell);
 
-                    
                     const subtotalCell = document.createElement("td");
                     const itemSubtotal = item.price * item.amount;
                     subtotalCell.textContent = `$${itemSubtotal.toFixed(2)}`;
                     row.appendChild(subtotalCell);
 
-                    tableBody.appendChild(row);  
+                    tableBody.appendChild(row);
 
-                   
                     subtotal += itemSubtotal;
-                    total += itemSubtotal;  
+                    total += itemSubtotal;
                 });
             }
 
-         
             updateCartInfo(subtotal, total);
 
         } catch (error) {
@@ -69,28 +64,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    
     async function deleteItemFromCart(itemID) {
         try {
             await cartDB.removeItemFromCart(itemID);
             alert("Item removed from cart!");
-            populateCartTable();
+            populateCartTable();  
         } catch (error) {
             console.error("Error removing item from cart:", error);
         }
     }
 
-    
+
     function updateCartInfo(subtotal, total) {
         const subtotalElement = document.querySelector("#subtotal .value");
         const totalElement = document.querySelector("#total .value");
 
-       
         subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
         totalElement.textContent = `$${total.toFixed(2)}`;
     }
 
-    
     async function addTestItems() {
         const testItems = [
             { id: 1, name: "Product A", price: 10.99, amount: 2 },
@@ -100,22 +92,27 @@ document.addEventListener("DOMContentLoaded", function () {
             { id: 5, name: "Product E", price: 12.50, amount: 2 },
             { id: 6, name: "Product F", price: 16.50, amount: 1 },
         ];
-    
-     
+
         for (const item of testItems) {
             try {
-                await cartDB.addItemToCart(item); 
+                await cartDB.addItemToCart(item);
                 console.log(`Added ${item.name} to cart!`);
             } catch (error) {
                 console.error(`Error adding ${item.name} to cart:`, error);
             }
         }
-    
-        populateCartTable();
+
+        populateCartTable();  
     }
 
-    // Add multiple test items to the cart (for testing purposes)
     addTestItems();
 
     populateCartTable();
+
+    const step1Button = document.querySelector(".step-1");  
+    if (step1Button) {
+        step1Button.addEventListener("click", () => {
+            window.location.href = "../home-and-profile/home-src/home.html";
+        });
+    }
 });
