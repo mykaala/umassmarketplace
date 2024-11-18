@@ -31,6 +31,11 @@
   1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/9fab028b26897a08fa99e3277da952bdcac6601f): Created aaditya-saini.md file in reports folder
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/5fabc9bba35028223b86ab01c5943dee648b260e): Completed the problem.md file
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/96c9b54599268e0a07675eb5ba5f26967c62a66e#diff-8d341108ea94cc7c4d7a9b569444055a7f2ddfc73646fa2d2b48e28d2f8ae2b1R32) Kept in touch with team members to make sure everyone understood their task and was up to date with their deadlines
+ 
+Milestone #3
+1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/c81526d70212df8cdb06892e615ae86dcf72db62): Created a class to store items that are added to cart in IndexedDB. It includes methods for opening the database and CRUD operations.
+2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/a199a3d391f0d6098bb6fe22d791f62ebda04208): Added functionality to edit contact information on the profile page. 
+3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/08712ca958c12f84a059e04ce102faaf10da8069) I created a modal-view form to allow users to edit and save changes to their contact information.
 
 
 ## Mykaala Firdaus - Quality Control
