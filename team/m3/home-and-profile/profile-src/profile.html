@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>UKart - Profile</title>
+		<link rel="stylesheet" href="./css/profile-styles.css" />
+		<link rel="stylesheet" href="../navbar/navbar-styles.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="navbar-container"></div>
+		<section class="profile">
+			<h2 class="profile-title">Your Profile</h2>
+
+			<div class="contact-info">
+				<h3>Contact Information</h3>
+				<div id="contact-display">
+					<p><strong>Name:</strong> <span id="contact-name">Sam Altman</span></p>
+					<p><strong>Email:</strong> <span id="contact-email">saltman@umass.edu</span></p>
+					<p><strong>Phone:</strong> <span id="contact-phone">+1 (911) 123-4567</span></p>
+					<p><strong>Address:</strong> <span id="contact-address">151 Orchard Hill Dr, Amherst MA, 01003</span></p>
+					<button id="edit-contact-btn" class="btn">Edit Contact Info</button>
+				</div>
+			</div>
+
+			<div class="selling-items">
+				<h3>Items You're Selling</h3>
+				<div class="item-list" id="selling-list"></div>
+			</div>
+
+			<div class="sold-items">
+				<h3>Items You've Sold</h3>
+				<div class="item-list" id="sold-list"></div>
+			</div>
+		</section>
+
+		<div id="edit-modal" class="modal">
+			<div class="modal-content">
+				<h3>Edit Contact Information</h3>
+				<form id="edit-form">
+					<label for="new-name">Name:</label>
+					<input type="text" id="new-name"/>
+
+					<label for="new-email">Email:</label>
+					<input type="email" id="new-email"/>
+
+					<label for="new-phone">Phone:</label>
+					<input type="tel" id="new-phone"/>
+
+					<label for="new-address">Address:</label>
+					<input type="text" id="new-address"/>
+
+					<button type="button" id="save-edit-btn" class="btn">Save</button>
+					<button type="button" id="cancel-edit-btn" class="btn">Cancel</button>
+				</form>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<p>CS326 Fall 2024 Team 37</p>
+		</footer>
+
+		<script src="./js/profile.js"></script>
+		<script src="../navbar/navbar-import.js"></script>
+	</body>
+</html>
