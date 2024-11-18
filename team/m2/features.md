@@ -1,46 +1,55 @@
-# Application Features
+# Features
 
-## Campus-Specific Listings
+## Front-End Features
 
-This feature allows users to post and browse listings specific to their college campus, focusing on categories such as housing, textbooks, and furniture. It ensures a simple marketplace experience tailored to the specific needs of students.
-**Point value** : 2
-**Assigned to**: Kevin Mathew
-  
-## User Registration with Campus Email
+### Sign In/Up Page 
+- **Description**: Allows users sign up and sign in from the same page with a toggle. Input fields have string validation and ensures only UMass emails are allowed.
+- **Point Value**: 3  
+- **Assigned To**: Aryan Vakil
 
-Users will sign up using their college email to verify their affiliation with the campus. This provides security and ensures that only verified students and staff can post or view listings, creating a trusted platform.
-**Point value** : 3
-**Assigned to**: Aryan Vakil
+### Product Details Page
+- **Description**: Allows users to view the products they clicked into on the home page in more detail. It displays image(s), title, description, price, seller information and an 'Add to Cart' button.
+- **Point Value**: 3  
+- **Assigned To**: Ali Rizvi
 
-## Simple Search and Filter
+### Profile Page
+- **Description**: Users can view their contact and payment information and edit them. They can also see a list of their current listings and previously sold items.
+- **Point Value**: 3  
+- **Assigned To**: Aaditya Saini
 
-Users can search listings by category or keywords and filter results by price or date posted. This basic search functionality makes navigating the platform more intuitive and user-friendly without requiring complex systems.
-**Point value** : 3
-**Assigned to**: Aaditya Saini
+### Home Page
+- **Description**: Users will land on this page and see the grid of products, and a navigation bar on top. They can choose to go to pages from the navigation bar.
+- **Point Value**: 3  
+- **Assigned To**: Mykaala Firdaus
 
-## Basic Listing Creation
+### Add a Listing Page
+- **Description**: Users can enter product details, image, select categories, and set the price to post a listing.
+- **Point Value**: 3 
+- **Assigned To**: Kevin Mathew
 
-This feature allows users to create new listings by filling out a form with details such as title, description, category, and price. Users will also be able to edit or delete their own listings, providing a straightforward way to manage posted content.
-**Point value** : 3
-**Assigned to**: Mykaala Firdaus
+### Cart Page
+- **Description**: Users can see a list of products that they've added to their cart and have the option to remove items from cart. It also has a 'Proceed to Checkout' button.
+- **Point Value**: 3 
+- **Assigned To**: Ryan Nguyen
 
-## Listing Expiration
+---
 
-Listings will automatically expire after a set period(30 days) to keep the platform current and free from outdated content. Users will be notified via email when their listings are about to expire and can renew or let them expire.
-**Point value** : 1
-**Assigned to**: Aryan Vakil
+## Back-End Features
 
-## Email Notifications
+### User Registration with Campus Email
+- **Description**: Users will sign up using their college email to verify their affiliation with the campus. This provides security and ensures that only verified students and staff can post or view listings, creating a trusted platform.
+- **Point Value**: 2 
+- **Assigned To**: Mykaala Firdaus, Aaditya Saini
 
-Users will receive basic email notifications for important events, such as when a listing is posted or about to expire. This feature provides essential communication without adding complexity to the platform.
-**Point value** : 2
-**Assigned to**: Ryan Nguyen
+### Listing Expiration
+- **Description**: Listings will automatically expire after a set period (30 days) to keep the platform current and free from outdated content. Users will be notified via email when their listings are about to expire and can renew or let them expire.
+- **Point Value**: 2 
+- **Assigned To**: Aryan Vakil, Ryan Nguyen
 
-## Add Images to Listings
-
-Users will be able to upload a single image for each listing to provide a visual representation of the item or service being posted. This feature enhances the user experience by making listings more informative and attractive, without requiring complex image gallery functionality.
-
-**Assigned to**: Kevin Mathew
+### Email Notifications
+- **Description**: Users will receive basic email notifications for important events, such as when a listing is posted or about to expire. This feature provides essential communication without adding complexity to the platform.
+- **Point Value**: 2  
+- **Assigned To**: Kevin Mathew, Ali Rizvi
 
 
 
