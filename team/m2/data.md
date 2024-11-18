@@ -14,9 +14,10 @@
 
 **Data Source:** User-input data during registration and profile updates.
 
-Front-End Interaction with IndexedDB:
+**Front-End Interaction with IndexedDB:**
 
 The front-end uses a class to manage IndexedDB operations for user profiles. This includes:
+- Stores cart items.
 - Retrieving user profiles from IndexedDB.
 - Updating contact information directly in the database.
 
