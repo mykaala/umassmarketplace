@@ -99,3 +99,11 @@ function validateForm() {
 
     return isValid;
 }
+
+document.getElementById('product-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (validateForm()) {
+        console.log("Redirecting to home page...");
+        window.location.href = "../home-and-profile/home-src/home.html";
+    }
+});
