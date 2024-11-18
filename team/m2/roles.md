@@ -3,10 +3,9 @@
 ## Ryan Nguyen - Note-Taker
 - **Role**: Records detailed notes during meetings and ensures that action items are clearly communicated. Responsible for distributing meeting minutes to the team after each session.
 - **Top 3 Commits**:
-  1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/53ba5a8ee5d79792545a724c8d128a7e94df98c1): Added spaces to make use case more clear
-  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/9f0fb440fda692216c3f356fdb1a5ac687702a6a): Added use cases for products listing page, Login page, and Registration page.
-  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/83106299accb0e03fbdf84137090bba0b4319254): Drafted products listing page, detailed functionalities of the products listing page.
-  4.  [Commit 4](https://github.com/mykaala/umassmarketplace/commit/baaeba98572ed1ac3818ce6be32a23b2c693e473): Took notes during meetings and kept track of what the group planned to do.
+  1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/4f7f16487c4f883c5b9647daf124cb1cae72a8d4): Added Cart total, subtotal and their corresponding prices into in-cart. Prices hard coded because JS not yet implemented. Significant because half of the more important parts of the UI was finished here (excluding JS)
+  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/f37a8625dd91991b8a34af30a121958dc03e86cf): Finished the background. Imported fonts and icons and styled them to fit the page's look. Important because this step allowed me to move onto the more important parts of the UI by setting up a solid background look first.
+  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/0b19ad19227444352f1b803525d4202270ffe318): Finished up the other half of the UI (cart-info). Important because getting the info to be in the cart info as a table was a difficult task. Additionally, for smaller screens the table wasn't rendered properly so that issue was resolved in this commit as well. Lastly, JS was added to allow for dynamic updating for the cart and the car totals.
 
 ## Ali Ayaan Rizvi - Project Manager 
 - **Role**: Led team in planning and executing the web app marketplace project, ensuring effective communication, resource management, and timely delivery of results.
