@@ -1,3 +1,5 @@
+//Class to make sure Cart is cached between page refreshes
+
 export class CartDB {
 	constructor(dbName) {
 		this.dbName = dbName;
