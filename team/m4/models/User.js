@@ -18,5 +18,4 @@ const User = dbService.defineModel('User', {
 });
 
 module.exports = User;
-
 User.hasMany(Product, { foreignKey: 'user_id' });
