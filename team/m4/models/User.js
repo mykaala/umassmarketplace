@@ -7,6 +7,14 @@ const User = dbService.defineModel('User', {
         type: dbService.getSequelize().INTEGER,
         primaryKey: true,
     },
+    username: {
+        type: dbService.getSequelize().STRING,
+        allowNull: false
+    },
+    password: {
+        type: dbService.getSequelize().STRING,
+        allowNull: false
+    },
     venmo: {
         type: dbService.getSequelize().STRING,
         allowNull: false,
@@ -18,4 +26,4 @@ const User = dbService.defineModel('User', {
 });
 
 module.exports = User;
-User.hasMany(Product, { foreignKey: 'user_id' });
+User.hasMany(Product, { foreignKey: 'id' });
