@@ -7,7 +7,7 @@ import { urlencoded } from "body-parser";
 
 const app = express();
 
-app.use(express.static("../m3/signin&up")); //Connecting the express to the frontEnd
+app.use(express.static("../m3/Signin&up")); //Connecting the express to the frontEnd
 app.use(express.json()); //So it can use and communicate with json
 app.use(urlencoded({extended: false}));
 app.use( //session management
