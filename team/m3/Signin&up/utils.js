@@ -39,4 +39,32 @@ function validUsername(username) {
     return /^[a-zA-Z0-9._]+$/.test(username);
 }
 
-export {passwordIsValid, validEmailFormat, passwordsMatch, validPhoneFormat, validUsername};
+async function signInBackEnd(username, password) {
+    const response = await fetch("/signin", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({username, password})
+    })
+    if (response.status === 200) {
+        window.location.href = "../home-and-profile/home-src";
+    }
+    else {
+        alert(await response.statusText);
+    }
+}
+
+async function signUpBackEnd(username, password, email, phoneNumber, venmo) {
+    const response = await fetch("/signin", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({username, password, email, phoneNumber, venmo})
+    })
+    if (response.status === 200) {
+        window.location.href = "../home-and-profile/home-src";
+    }
+    else {
+        alert(await response.statusText);
+    }
+}
+
+export {passwordIsValid, validEmailFormat, passwordsMatch, validPhoneFormat, validUsername, signInBackEnd, signUpBackEnd};
