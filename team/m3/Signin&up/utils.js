@@ -49,7 +49,7 @@ async function signInBackEnd(username, password) {
         window.location.href = "../home-and-profile/home-src";
     }
     else {
-        alert(await response.statusText);
+        alert(response.statusText);
     }
 }
 
@@ -63,7 +63,7 @@ async function signUpBackEnd(username, password, email, phoneNumber, venmo) {
         window.location.href = "../home-and-profile/home-src";
     }
     else {
-        alert(await response.statusText);
+        alert(response.statusText);
     }
 }
 
