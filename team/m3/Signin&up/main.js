@@ -1,4 +1,4 @@
-import {passwordIsValid, validEmailFormat, passwordsMatch, validPhoneFormat, validUsername} from './utils.js';
+import {passwordIsValid, validEmailFormat, passwordsMatch, validPhoneFormat, validUsername, signInBackEnd, signUpBackEnd} from './utils.js';
 
 const signInTog = document.getElementById('signInTog');
 const signUpTog = document.getElementById('signUpTog');
@@ -113,7 +113,8 @@ signInButton.addEventListener('click', () => {
         }
     })
     if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length === feedbacks.length) {
-        alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
+        //alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
+        signInBackEnd(usernameIn.value, passwordIn.value);
         passwordIn.value = '';
         usernameIn.value = '';
     }
@@ -135,7 +136,8 @@ signUpButton.addEventListener('click', () => {
         }
     })
     if (Array.from(feedbacks).filter(feedback => feedback.style.display === 'none').length === feedbacks.length) {
-        alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
+        // alert(`This feature has not been implemented yet as it requires back-end code. Thank you for your patience while we work on it.`);
+        signUpBackEnd(usernameUp.value, passwordUpInput.value, document.getElementById('venmo-input').value, phoneInput.value, emailInput.value);
         passwordUpInput.value = '';
         usernameUp.value = '';
         repeatedPassword.value = '';
