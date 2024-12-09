@@ -100,9 +100,49 @@ function validateForm() {
     return isValid;
 }
 
-document.getElementById('product-form').addEventListener('submit', function (event) {
+document.getElementById('product-form').addEventListener('submit', async function (event) {
     event.preventDefault();
+
     if (validateForm()) {
+
+        // const formData = new FormData(this);
+        // const data = {
+        //     name: formData.get('product-title'),
+        //     category: formData.get('category'),
+        //     price: formData.get('price'),
+        //     description: formData.get('description'),
+        //     condition: formData.get('condition'),
+        //     email: formData.get('contact-email'),
+        //     number: formData.get('contact-phone'),
+        // };
+
+        // // Check for optional image
+        // const imageFile = formData.get('product-image');
+        // if (imageFile) {
+        //     data.imageURL = URL.createObjectURL(imageFile); // Adjust as needed for your backend
+        // }
+
+        // try {
+        //     // Send data to the backend
+        //     const response = await fetch('/api/products', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(data),
+        //     });
+
+        //     if (response.ok) {
+        //         alert('Product posted successfully!');
+        //         window.location.href = '../home-and-profile/home-src/home.html';
+        //     } else {
+        //         alert('Error posting product: ' + response.statusText);
+        //     }
+        // } catch (error) {
+        //     console.error('Error submitting form:', error);
+        // }
+
+
         console.log("Redirecting to home page...");
         window.location.href = "../home-and-profile/home-src/home.html";
     }
