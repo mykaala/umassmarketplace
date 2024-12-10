@@ -3,10 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const DatabaseService = require('./sequelize-db.js');
 const productRoutes = require('./controllers/express-products.js'); // Import your routes
-
+const cartRoutes = require('./controllers/express-cart.js'); // Import your routes
+const detailsRoutes = require('./controllers/express-details.js'); // Import your routes
 // Database file path
 const databaseFilePath = path.resolve(__dirname, 'marketplaceDB.db');
-
+const app = express();
 // Connecting to Database
 const databaseService = new DatabaseService(databaseFilePath);
 
@@ -26,17 +27,18 @@ const databaseService = new DatabaseService(databaseFilePath);
 })();
 
 // Create an Express app
-const app = express();
+
 
 app.use(bodyParser.json()); // Parse JSON bodies
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
 
 // Routes
 app.use('/api/products', productRoutes);
-
+app.use('/api/cart', cartRoutes);
+app.use('/api/details', detailsRoutes);
+app.use(express.static(path.join(__dirname, '../m3')));
 // Define a default route
-app.get('/', (req, res) => {
-    res.send('Welcome to the Marketplace API!');
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../m3/home-and-profile/home-src/home.html'));
 });
 
 // Start the server

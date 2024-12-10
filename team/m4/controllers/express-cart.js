@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router(); // Create a new router instance
-const Product = require('./Product'); 
+const { Product } = require('../models'); 
 // app.use(express.json());
 
 // DELETE /cart endpoint to handle removing products from the cart
-router.delete('/cart', async (req, res) => {
+router.delete('/', async (req, res) => {
     try {
         // Extract the `productIds` array from the request body
         const { productIds } = req.body;  

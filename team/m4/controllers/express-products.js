@@ -3,7 +3,7 @@ const router = express.Router();
 const { Product } = require('../models'); // Adjust the path based on your project structure
 
 // Route to fetch all products
-router.get('/api/products', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         // Fetch all products from the database
         const allProducts = await Product.findAll();
