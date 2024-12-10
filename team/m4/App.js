@@ -21,6 +21,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use("/", routes);
 
-app.listen(3000, () => console.log("Server is running!"));
+app.listen(3000, () => console.log("Server is running!")); //server listening on port 3000.
 
-export default app;
+export default app; //exporting the express instance to be used in other sections.
