@@ -2,7 +2,7 @@ const DatabaseService = require('./DatabaseService');
 const Product = require('./Product');
 const dbService = new DatabaseService('../marketplaceDB.db');
 
-const Image = sequelize.define('Image', {
+const Image = sequelize.define('Image', { // Defines a Image table in the SQLite DB
     image_id: {
       type: dbService.getSequelize().INTEGER,
       primaryKey: true,

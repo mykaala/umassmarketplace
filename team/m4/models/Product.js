@@ -4,7 +4,7 @@ const Image = require('./Image');
 const dbService = new DatabaseService('../marketplaceDB.db');
 
 const Product = dbService.defineModel('Product', {
-    id: { //primary key for each row in Product Table
+    id: {
         type: dbService.getSequelize().INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -23,7 +23,7 @@ const Product = dbService.defineModel('Product', {
     },
     price: { //price
         type: dbService.getSequelize().DECIMAL,
-        allowNull: false,
+        allowNull: false
     },
     seller_id: {// Foreign key to the User table
         type: dbService.getSequelize().INTEGER,
