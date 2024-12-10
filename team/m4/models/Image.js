@@ -7,7 +7,6 @@ const Image = dbService.defineModel('Image', { // Defines a Image table in the S
     image_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true,
     },
     image_url: {
         type: DataTypes.STRING,
