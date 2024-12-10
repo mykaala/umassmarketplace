@@ -2,12 +2,14 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const DatabaseService = require('./sequelize-db.js');
-const productRoutes = require('./controllers/express-products.js'); // Import your routes
+const productRoutes = require('./controllers/express-products.js');
 const cartRoutes = require('./controllers/express-cart.js');
 const detailsRoutes = require('./controllers/express-details.js');
+
 // Database file path
 const databaseFilePath = path.resolve(__dirname, 'marketplaceDB.db');
 const app = express();
+
 // Connecting to Database
 const databaseService = new DatabaseService(databaseFilePath);
 
@@ -26,21 +28,21 @@ const databaseService = new DatabaseService(databaseFilePath);
 	}
 })();
 
-// Create an Express app
-
 app.use(bodyParser.json()); // Parse JSON bodies
 
 // Routes
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/details', detailsRoutes);
+
+// Serve all files in the m3 directory as static files
 app.use(express.static(path.join(__dirname, '../m3')));
-// Define a default route
+
+// Wildcard route: if no other route matches, serve home.html
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '../m3/home-and-profile/home-src/home.html'));
 });
 
-// Start the server
 const PORT = 3000;
 app.listen(PORT, () => {
 	console.log(`Server is running on http://localhost:${PORT}`);

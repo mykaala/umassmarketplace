@@ -50,7 +50,6 @@
 // 	});
 // }
 
-
 // Load navbar
 fetch('/navbar/navbar.html')
 	.then((response) => response.text())
@@ -90,7 +89,11 @@ async function displayProducts() {
 
 			const button = document.createElement('button');
 			button.textContent = 'View';
-			button.onclick = () => alert(`Details for ${product.name}`);
+			button.onclick = () => {
+				const encodedData = encodeURIComponent(JSON.stringify(product));
+				window.location.href = `/product-details/productDetails.html?data=${encodedData}`;
+			};
+
 			card.appendChild(button);
 
 			productGrid.appendChild(card);
