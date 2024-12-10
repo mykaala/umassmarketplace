@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router(); // Create a new router instance
-const Product = require('./Product'); // Import the Product model, assumed to be set up with an ORM like Sequelize
-
+const Product = require('./Product'); 
 // app.use(express.json());
 
 // DELETE /cart endpoint to handle removing products from the cart
@@ -18,7 +17,7 @@ router.delete('/cart', async (req, res) => {
         // Remove products from the database where the product IDs match the provided `productIds` array
         await Product.destroy({
             where: {
-                id: productIds,  // Assumes `id` is the primary key field in the `Product` table
+                id: productIds,  
             },
         });
 
