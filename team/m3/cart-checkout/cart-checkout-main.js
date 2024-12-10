@@ -64,12 +64,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    async function deleteItemFromCart(itemID) {
+    async function deleteItemFromCart(itemIDs) { 
         try {
-            await cartDB.removeItemFromCart(itemID);
-            populateCartTable();  
+            // First, remove each item from the cart in the local database (client-side cartDB)
+            for (let i = 0; i < itemIDs.length; i++) {
+                await cartDB.removeItemFromCart(itemIDs[i]);
+            }
+    
+            // Now send the DELETE request to the backend to delete the items from the server-side database
+            const response = await fetch('/api/cart', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',  // Ensure you're sending JSON
+                },
+                body: JSON.stringify({ productIds: itemIDs }),  // Send the array of item IDs to delete
+            });
+    
+            const data = await response.json();  // Parse the response from the server
+    
+            if (response.ok) {
+                console.log(data.message); // Log success message from server
+                populateCartTable();  // Update the table after the deletion
+            } else {
+                console.error('Error:', data.error); // Handle error if deletion fails
+            }
         } catch (error) {
-            console.error("Error removing item from cart:", error);
+            console.error("Error removing item from cart:", error); // Handle client-side errors
         }
     }
 
