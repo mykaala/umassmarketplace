@@ -51,14 +51,12 @@
 // }
 
 // Load navbar
-fetch('../../navbar/navbar.html')
+fetch('/navbar/navbar.html')
 	.then((response) => response.text())
 	.then((data) => {
 		document.getElementById('navbar-container').innerHTML = data;
 	})
 	.catch((error) => console.error('Error loading navbar:', error));
-
-document.addEventListener('DOMContentLoaded', displayProducts);
 
 async function displayProducts() {
 	const productGrid = document.getElementById('product-grid');
@@ -91,7 +89,11 @@ async function displayProducts() {
 
 			const button = document.createElement('button');
 			button.textContent = 'View';
-			button.onclick = () => alert(`Details for ${product.name}`);
+			button.onclick = () => {
+				const encodedData = encodeURIComponent(JSON.stringify(product));
+				window.location.href = `/product-details/productDetails.html?data=${encodedData}`;
+			};
+
 			card.appendChild(button);
 
 			productGrid.appendChild(card);
@@ -102,6 +104,5 @@ async function displayProducts() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
-
-
+document.addEventListener('DOMContentLoaded', displayProducts);
+//document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
