@@ -133,6 +133,7 @@ a {
     align-items: flex-start;
     gap: 5%;
     overflow-y: auto;
+    padding-top: 100px;
 }
 
 #cart-info {
