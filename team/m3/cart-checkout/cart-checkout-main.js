@@ -67,12 +67,28 @@ document.addEventListener("DOMContentLoaded", function () {
     async function deleteItemFromCart(itemID) {
         try {
             await cartDB.removeItemFromCart(itemID);
-            alert("Item removed from cart!");
             populateCartTable();  
         } catch (error) {
             console.error("Error removing item from cart:", error);
         }
     }
+
+    // Function to clear the entire cart (for checkout)
+    async function proceedToCheckout() {
+        try {
+            const items = await cartDB.getItemsFromCart(); // Get all the items in the cart
+    
+            for (const item of items) {
+                await cartDB.removeItemFromCart(item.id);
+            }
+    
+            populateCartTable(); 
+            alert("Order confirmed! Check your email for details.")
+        } catch (error) {
+            console.error("Error clearing the cart:", error);
+        }
+    }
+
 
 
     function updateCartInfo(subtotal, total) {
@@ -85,11 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function addTestItems() {
         const testItems = [
-            { id: 1, name: "Product A", price: 10.99, amount: 2 },
-            { id: 2, name: "Product B", price: 5.49, amount: 3 },
+            { id: 1, name: "Product A", price: 10.99, amount: 1 },
+            { id: 2, name: "Product B", price: 5.49, amount: 1 },
             { id: 3, name: "Product C", price: 15.75, amount: 1 },
-            { id: 4, name: "Product D", price: 7.99, amount: 4 },
-            { id: 5, name: "Product E", price: 12.50, amount: 2 },
+            { id: 4, name: "Product D", price: 7.99, amount: 1 },
+            { id: 5, name: "Product E", price: 12.50, amount: 1 },
             { id: 6, name: "Product F", price: 16.50, amount: 1 },
         ];
 
@@ -114,5 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
         step1Button.addEventListener("click", () => {
             window.location.href = "../home-and-profile/home-src/home.html";
         });
+    }
+
+    const confirmOrderButton = document.querySelector("#button"); 
+    if (confirmOrderButton) {
+        confirmOrderButton.addEventListener("click", proceedToCheckout); 
     }
 });
