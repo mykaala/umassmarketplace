@@ -15,11 +15,15 @@ router.delete('/cart', async (req, res) => {
         }
 
         // Remove products from the database where the product IDs match the provided `productIds` array
-        await Product.destroy({
+        const deletedCount = await Product.destroy({
             where: {
-                id: productIds,  
+                id: productIds,
             },
         });
+
+        if (deletedCount !== productIds.length) { //sanity check
+            return res.status(404).json({ error: "Not all products in cart were found in database"});
+        }
 
         // If the operation is successful, return a success response
         res.status(200).json({ message: 'Products removed from cart successfully' });

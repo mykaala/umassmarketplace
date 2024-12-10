@@ -64,15 +64,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    async function deleteItemFromCart(itemID) {
+    // DELETE /cart endpoint to handle removing products from the cart
+    async function deleteItemFromCart(itemIDs) { 
         try {
-            await cartDB.removeItemFromCart(itemID);
-            populateCartTable();  
+            // First, remove each item from the cart in the local database (client-side cartDB)
+            for (let i = 0; i < itemIDs.length; i++) {
+                await cartDB.removeItemFromCart(itemIDs[i]);
+            }
+    
+            const response = await fetch('/api/cart', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',  
+                },
+                body: JSON.stringify({ productIds: itemIDs }),  // Send the array of item IDs to delete
+            });
+    
+            const data = await response.json();  
+    
+            if (response.ok) {
+                console.log(data.message); // Log success message from server
+                populateCartTable();  // Update the table after the deletion
+            } else {
+                console.error('Error:', data.error); // Handle error if deletion fails
+            }
         } catch (error) {
-            console.error("Error removing item from cart:", error);
+            console.error("Error removing item from cart:", error); // Handle client-side errors
         }
     }
-
+    
     // Function to clear the entire cart (for checkout)
     async function proceedToCheckout() {
         try {
