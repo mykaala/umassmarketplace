@@ -1,8 +1,10 @@
 const path = require('path');
-const express = require('express');
+const express = require('express');// Import Express
 const bodyParser = require('body-parser');
-const DatabaseService = require('./sequelize-db.js');
 const productRoutes = require('./controllers/express-products.js'); // Import your routes
+const cors = require('cors'); // Import CORS middleware
+// const productRoutes = require('./routes/productRoutes'); // Import Product Routes
+const DatabaseService = require('./sequelize-db.js'); // Import Database Service
 
 // Database file path
 const databaseFilePath = path.resolve(__dirname, 'marketplaceDB.db');
@@ -30,7 +32,7 @@ const app = express();
 
 app.use(bodyParser.json()); // Parse JSON bodies
 app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
-
+app.use(cors());
 // Routes
 app.use('/api/products', productRoutes);
 
