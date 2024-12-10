@@ -3,7 +3,7 @@ const User = require('./User');
 const Image = require('./Image');
 const dbService = new DatabaseService('../marketplaceDB.db');
 
-const Product = dbService.defineModel('Product', {
+const Product = dbService.defineModel('Product', { // Defines a Product table in the SQLite DB
     id: {
         type: dbService.getSequelize().INTEGER,
         primaryKey: true,
@@ -19,7 +19,7 @@ const Product = dbService.defineModel('Product', {
     },
     price: {
         type: dbService.getSequelize().DECIMAL,
-        allowNull: false,
+        allowNull: false
     },
     seller_id: {
         type: dbService.getSequelize().INTEGER,
