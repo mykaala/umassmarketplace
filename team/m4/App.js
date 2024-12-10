@@ -29,15 +29,18 @@ const databaseService = new DatabaseService(databaseFilePath);
 const app = express();
 
 app.use(bodyParser.json()); // Parse JSON bodies
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
+app.use(express.static(path.join(__dirname, '../../m3'))); // Serve static files
 
 // Routes
 app.use('/api/products', productRoutes);
 
 // Define a default route
-app.get('/', (req, res) => {
-    res.send('Welcome to the Marketplace API!');
+//app.use(express.static(path.join(__dirname, '../../m3')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', '../../m3/home-and-profile/home-src/home.html'));
 });
+
 
 // Start the server
 const PORT = 3000;

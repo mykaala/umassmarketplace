@@ -92,7 +92,7 @@ async function displayProducts() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
+// document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
 
 // Load navbar
 fetch('../../navbar/navbar.html')
