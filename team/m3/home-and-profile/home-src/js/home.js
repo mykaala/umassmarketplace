@@ -50,6 +50,7 @@
 // 	});
 // }
 
+
 // Load navbar
 fetch('/navbar/navbar.html')
 	.then((response) => response.text())
@@ -57,8 +58,6 @@ fetch('/navbar/navbar.html')
 		document.getElementById('navbar-container').innerHTML = data;
 	})
 	.catch((error) => console.error('Error loading navbar:', error));
-
-document.addEventListener('DOMContentLoaded', displayProducts);
 
 async function displayProducts() {
 	const productGrid = document.getElementById('product-grid');
@@ -102,4 +101,5 @@ async function displayProducts() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
+document.addEventListener('DOMContentLoaded', displayProducts);
+//document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
