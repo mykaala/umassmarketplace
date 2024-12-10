@@ -1,37 +1,36 @@
-const DatabaseService = require('./DatabaseService');
-const Product = require('./Product');
+const { DataTypes } = require('sequelize');
+const DatabaseService = require('../sequelize-db.js');
 const dbService = new DatabaseService('../marketplaceDB.db');
 
-const User = dbService.defineModel('User', { // Defines a User table in the SQLite DB
+const User = dbService.defineModel('User', {
     id: {
-        type: dbService.getSequelize().INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true,
     },
     username: {
-        type: dbService.getSequelize().STRING,
-        allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     password: {
-        type: dbService.getSequelize().STRING,
-        allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     phone_number: {
-        type: dbService.getSequelize().STRING,
-        allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     email: {
-        type: dbService.getSequelize().STRING,
-        allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     venmo: {
-        type: dbService.getSequelize().STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     name: {
-        type: dbService.getSequelize().STRING,
+        type: DataTypes.STRING,
         allowNull: false,
     },
 });
 
 module.exports = User;
-User.hasMany(Product, { foreignKey: 'id' });

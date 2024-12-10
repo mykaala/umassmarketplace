@@ -1,26 +1,22 @@
-const DatabaseService = require('./DatabaseService');
-const Product = require('./Product');
+const DatabaseService = require('../sequelize-db.js');
+const { DataTypes } = require('sequelize');
+const Product = require('./Product.js');
 const dbService = new DatabaseService('../marketplaceDB.db');
 
-const Image = sequelize.define('Image', { // Defines a Image table in the SQLite DB
+const Image = dbService.defineModel('Image', { // Defines a Image table in the SQLite DB
     image_id: {
-      type: dbService.getSequelize().INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     image_url: {
-        type: dbService.getSequelize().STRING,
+        type: DataTypes.STRING,
     },
     product_id: {
         type: DataTypes.INTEGER,
-        references: {
-          model: Product,    
-          key: 'id', 
-        },
         allowNull: false,
     }
 });
 
-Image.belongsTo(Product, { foreignKey: 'product_id' });
 
 module.exports = Image;
