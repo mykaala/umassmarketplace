@@ -4,3 +4,5 @@ node_modules/
 
 # Ignore SQLite database files (optional)
 *.sqlite
+
+.DS_Store
