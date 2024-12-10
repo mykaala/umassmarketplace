@@ -26,6 +26,11 @@ const databaseService = new DatabaseService(databaseFilePath);
         // Enable CORS to handle cross-origin requests
         app.use(cors());
 
+        // Sync database models
+        const sequelize = databaseService.getSequelize();
+        await sequelize.sync({ alter: true }); // Adjusts table to match model
+        console.log("Database models synced!");
+
         // Use product routes
         app.use('/api', productRoutes);
 

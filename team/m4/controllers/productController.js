@@ -1,7 +1,6 @@
-// Temporary in-memory storage (just for testing, replace with database later)
-let products = [];
+const Product = require('../models/Product'); // Import the Product model
 
-const createProduct = (req, res) => {
+const createProduct = async (req, res) => {
     try {
         const { name, category, price, description, condition, email, number, imageURL } = req.body;
 
@@ -13,9 +12,8 @@ const createProduct = (req, res) => {
             return res.status(400).json({ error: 'Missing required fields' });
         }
 
-        // Create a new product object
-        const newProduct = {
-            id: products.length + 1, // Generate a simple ID for testing
+        // Save the product to the database
+        const newProduct = await Product.create({
             name,
             category,
             price,
@@ -24,10 +22,13 @@ const createProduct = (req, res) => {
             email,
             number,
             imageURL: imageURL || null, // Optional image
-        };
+            seller_id: 1, // Temporary hardcoded value for now
+            seller_name: 'Test User', // Temporary hardcoded value for now
+        });
 
-        // Add the product to the in-memory list (replace this with database later)
-        products.push(newProduct);
+        // Fetch all products to verify the database state
+        const allProducts = await Product.findAll();
+        console.log('Current Products in Database:', allProducts);
 
         // Send a success response
         res.status(201).json({ message: 'Product created successfully', product: newProduct });
@@ -37,6 +38,4 @@ const createProduct = (req, res) => {
     }
 };
 
-
 module.exports = { createProduct };
-
