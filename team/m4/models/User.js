@@ -2,7 +2,7 @@ const DatabaseService = require('./DatabaseService');
 const Product = require('./Product');
 const dbService = new DatabaseService('../marketplaceDB.db');
 
-const User = dbService.defineModel('User', {
+const User = dbService.defineModel('User', { // Defines a User table in the SQLite DB
     id: {
         type: dbService.getSequelize().INTEGER,
         primaryKey: true,
@@ -12,6 +12,14 @@ const User = dbService.defineModel('User', {
         allowNull: false
     },
     password: {
+        type: dbService.getSequelize().STRING,
+        allowNull: false
+    },
+    phone_number: {
+        type: dbService.getSequelize().STRING,
+        allowNull: false
+    },
+    email: {
         type: dbService.getSequelize().STRING,
         allowNull: false
     },
