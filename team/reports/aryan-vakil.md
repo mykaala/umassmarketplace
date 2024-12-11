@@ -8,4 +8,4 @@ Link to all commits: https://github.com/mykaala/umassmarketplace/commits?author=
 
 For Milestone 4, I did create backend endpoints and router for the sign up and sign in page enabling local authentication. I also updated the front end code of sign in sign up page to include the functional navbar and send requests to backend when all the required fields are satisfied.
 
-Link to All Commits: https://github.com/mykaala/umassmarketplace/commits/Local-Authentication?author=Aryanvkl
+Link to All Commits in Local-Authentication branch: https://github.com/mykaala/umassmarketplace/commits/Local-Authentication?author=Aryanvkl
