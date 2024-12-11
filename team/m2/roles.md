@@ -52,6 +52,10 @@ Milestone #3
 2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/a199a3d391f0d6098bb6fe22d791f62ebda04208): Added functionality to edit contact information on the profile page. 
 3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/08712ca958c12f84a059e04ce102faaf10da8069) I created a modal-view form to allow users to edit and save changes to their contact information.
 
+Milestone #4
+1. [Commit 1] (https://github.com/mykaala/umassmarketplace/commit/7bab4d2dd0a385803ed48e6ebb4bc2019ca399ec): Implemented SQLite3 integration and defined Models (Tables) to use in our SQLite3 database.
+2. [Commit 2] (https://github.com/mykaala/umassmarketplace/commit/ce7b53d6069f36f683c19eb87ff500399494dc8d): Added backend endpoints to load products from the database onto the home page to display on the marketplace.
+3. [Commit 3] (https://github.com/mykaala/umassmarketplace/commit/433ee72422afa9175ca901f04b3f68ac56fc8a4f): Added backend endpoints to load products from the database onto the profile page and display.
 
 ## Mykaala Firdaus - Quality Control
 - **Role**: Oversaw the quality assurance and PR-merging process for the project, ensuring all features met functional requirements, identifying and mitigating merging issues and solving them.
