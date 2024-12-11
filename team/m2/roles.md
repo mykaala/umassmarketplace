@@ -87,6 +87,10 @@ Milestone #4
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/6ad38261db456afe478d6bd697117db3ab51d468): Added feedback functionality for when the textboxes are not satisfied using a loop. Also, made sure that they the most up to date feedback fields.
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/63aa980f51a1ef1a6ae2a5d48a6f535ece02021f): Added nav bar and resolved some of the issues of the design such as min size for the sign-in and sign out bar.
 
+- **Milestone 4 - Top Commits**:
+- 1.[Commit 1](https://github.com/mykaala/umassmarketplace/commit/b55b5b764bd19b1a846b6392dcfb14849103e5f8): Added functions in the frontend enabling it to send and receive information from the backend. The functions were exported for use in main.js file in the frontEnd.
+  2.[Commit 2](https://github.com/mykaala/umassmarketplace/commit/3d8b23fc0ca6da83a3f482c8893dd7b0ff06f06b): Updated the endpoints for sign in and sign up based on the testDatabaseServer file
+  3.[Commit 3](https://github.com/mykaala/umassmarketplace/commit/b6025817a0dce2e818a7b85c6d0b379925f43a76): Created an express server to enable authentication. 
 ## Ayushman Satpathy - Meeting Planner
 - **Role**: Coordinate schedules and manage appointments with our intuitive meeting planner, designed to streamline collaboration and enhance productivity.
 - **Top Commits**:
