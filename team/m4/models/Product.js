@@ -14,7 +14,7 @@ const Product = dbService.defineModel('Product', {
     },
     category: { // Product category
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     description: { // Product description
         type: DataTypes.TEXT,
@@ -26,15 +26,15 @@ const Product = dbService.defineModel('Product', {
     },
     condition: { // Product condition (new or used)
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     email: { // Seller email
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     number: { // Seller phone number
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     imageURL: { // Optional product image URL
         type: DataTypes.STRING,
@@ -51,5 +51,3 @@ const Product = dbService.defineModel('Product', {
 });
 
 module.exports = Product;
-
-
