@@ -9,14 +9,6 @@ UMass Marketplace is a simple, college-specific online platform designed for stu
 
 ---
 
-## Features
-
-- **Listings:** Students can post items for sale or browse available listings.
-- **Categories:** Items are organized into categories for easy navigation.
-- **User-Friendly Interface:** Simple design for quick access to essential features.
-
----
-
 ## Prerequisites
 
 To run this application locally, ensure you have the following installed:
@@ -25,3 +17,24 @@ To run this application locally, ensure you have the following installed:
 All required dependencies are included in the `package.json` file. To install them, run:
 ```bash
 npm install
+npm install sequelize
+npm install sqlite3
+npm install express
+```
+
+### Reach the `m4` Directory
+```
+cd team
+cd m4
+```
+
+### Running the Database
+```
+node testDatabaseService.js
+```
+### Running the Server
+```
+node App.js
+```
+Now you can open `http://localhost:3000`!
+
