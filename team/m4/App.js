@@ -5,6 +5,7 @@ const DatabaseService = require('./sequelize-db.js');
 const productRoutes = require('./controllers/express-products.js');
 const cartRoutes = require('./controllers/express-cart.js');
 const detailsRoutes = require('./controllers/express-details.js');
+const profileRoutes = require('./controllers/express-profile.js');
 
 // Database file path
 const databaseFilePath = path.resolve(__dirname, 'marketplaceDB.db');
@@ -34,6 +35,7 @@ app.use(bodyParser.json()); // Parse JSON bodies
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/details', detailsRoutes);
+app.use('/api/profile', profileRoutes);
 
 // Serve all files in the m3 directory as static files
 app.use(express.static(path.join(__dirname, '../m3')));

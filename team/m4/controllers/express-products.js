@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Product } = require('../models'); // Adjust the path based on your project structure
+const { Product } = require('../models');
 
 // Route to fetch all products
 router.get('/', async (req, res) => {
