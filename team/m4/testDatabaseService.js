@@ -19,7 +19,7 @@ async function testDatabaseService() {
 		// Test CREATE operation for User model with mock data
 		console.log('Testing CREATE operation for User...');
 		const newUser = await User.create({
-			id: '1',
+			id: '28384324',
 			username: 'johndoe',
 			password: 'password123',
 			phone_number: '1234567890',
@@ -35,38 +35,42 @@ async function testDatabaseService() {
 			{
 				seller_id: '3',
 				seller_name: 'Alice',
+				category: "test category 1",
 				name: 'Vintage Lamp',
 				description: 'A charming antique lamp to brighten your room.',
 				imageURL: 'images/vintage_lamp.jpg',
 				price: 49.99,
-				user_id: '1'
+				user_id: '123123'
 			},
 			{
 				seller_id: '4',
 				seller_name: 'Bob',
+				category: "test category 1",
 				name: 'Ergonomic Office Chair',
 				description: 'Comfortable chair with lumbar support and adjustable height.',
 				imageURL: 'images/office_chair.jpg',
 				price: 89.99,
-				user_id: '1'
+				user_id: '234234'
 			},
 			{
 				seller_id: '5',
 				seller_name: 'Charlie',
+				category: "test category 1",
 				name: 'Noise-Cancelling Headphones',
 				description: 'High-quality headphones with excellent sound and noise isolation.',
 				imageURL: 'images/headphones.jpg',
 				price: 199.99,
-				user_id: '1'
+				user_id: '456456'
 			},
 			{
 				seller_id: '6',
 				seller_name: 'Diana',
+				category: "test category 1",
 				name: 'Ceramic Coffee Mug',
 				description: 'Hand-painted mug perfect for coffee, tea, and other hot beverages.',
 				imageURL: 'images/coffee_mug.jpg',
 				price: 14.99,
-				user_id: '1'
+				user_id: '657567'
 			}
 		];
 
@@ -155,7 +159,7 @@ async function testDatabaseService() {
 				description: 'A sleek keyboard with Bluetooth connectivity.',
 				imageURL: 'images/wireless_keyboard.jpg',
 				price: 35.99,
-				user_id: '2' // Owned by Alice (user_id=2)
+				user_id: '21' // Owned by Alice (user_id=2)
 			},
 			{
 				seller_id: '8',
@@ -164,7 +168,7 @@ async function testDatabaseService() {
 				description: 'Track your fitness and stay connected on the go.',
 				imageURL: 'images/smartwatch.jpg',
 				price: 129.99,
-				user_id: '2' // Also owned by Alice
+				user_id: '22' // Also owned by Alice
 			},
 			{
 				seller_id: '9',
@@ -173,7 +177,7 @@ async function testDatabaseService() {
 				description: 'Enjoy music outdoors with a compact wireless speaker.',
 				imageURL: 'images/portable_speaker.jpg',
 				price: 59.99,
-				user_id: '3' // Owned by Bob (user_id=3)
+				user_id: '33' // Owned by Bob (user_id=3)
 			},
 			{
 				seller_id: '10',
@@ -182,7 +186,7 @@ async function testDatabaseService() {
 				description: 'Read your favorite books on a lightweight e-ink device.',
 				imageURL: 'images/ebook_reader.jpg',
 				price: 99.99,
-				user_id: '4' // Owned by Charlie (user_id=4)
+				user_id: '44' // Owned by Charlie (user_id=4)
 			}
 		];
 
