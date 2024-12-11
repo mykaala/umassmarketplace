@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('.product-title').textContent = product.name;
 		document.querySelector('.product-price').textContent = `$${product.price}`;
 		document.querySelector('.product-description').textContent = product.description;
+		
 
 		// If the product includes imageURL or other fields, apply them as well
 		const mainImage = document.getElementById('mainImage');
