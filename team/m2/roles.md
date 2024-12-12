@@ -22,7 +22,11 @@ Milestone 3:
   2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/740b831320a4c4bfc8180c3ae96711953c3e34fa): Implemented "add to cart" feature in product details page where user can add or remove a specific product to cart.
   3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/e3f088211d23d22641aa30e43e1370c7c44b0603): Implemented NavBar to allow for seamless transition between pages. Linked each navbar icon to corresponding html page.
 
- 
+Milestone 4:
+- **Top Commits**:
+  1. [Commit 1](https://github.com/mykaala/umassmarketplace/commit/f9a107c11070fb0d6cdb8850b9a028539aeb7019): Created controller file for Product Details page to fetch and display product details using router and Product SQLite model.
+  2. [Commit 2](https://github.com/mykaala/umassmarketplace/commit/a2ca0ec34b3fea6aae68a8df0e9074e0f0c57139): Debugged controller files to properly fetch Products, Product Details, and delete items from cart through API calls. Then used Thunder Client to test API calls and ensure functionality.
+  3. [Commit 3](https://github.com/mykaala/umassmarketplace/commit/ca706cbad0b4f20eba54389e0f5b9d69dfe11eab): Worked with Mykaala to configure and fetch product endpoints for both the home page and product details page. We then implemented the front-end accordingly to display the fetched products and details in an organized and styled manner. 
 
 ## Kevin Mathew - Time-Keeper 
 **Role**: Responsible for tracking time during meetings, providing reminders, and ensuring tasks were completed within deadlines to keep the team on schedule.
